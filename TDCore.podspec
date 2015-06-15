@@ -9,22 +9,17 @@
 
 Pod::Spec.new do |s|
   s.name             = "TDCore"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of TDCore."
-  s.description      = <<-DESC
-                       An optional longer description of TDCore
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/TDCore"
+  s.version          = "1.0.0"
+  s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
+  s.description      = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you. Its develop by ThuyDao"
+  s.homepage         = "https://github.com/thuydao/TDCore"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Thuỷ Đào" => "thuydd@smartosc.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/TDCore.git", :tag => s.version.to_s }
+  s.author           = { "Thuỷ Đào" => "daoduythuy@gmail.com" }
+  s.source           = { :git => "https://github.com/thuydao/TDCore.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
