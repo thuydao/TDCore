@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDUtils/TDAlert.h
+../../../../../TDUtils/TDAlert.h

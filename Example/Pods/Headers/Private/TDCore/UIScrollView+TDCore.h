@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDCategory/UIScrollView+TDCore.h
+../../../../../TDCategory/UIScrollView+TDCore.h

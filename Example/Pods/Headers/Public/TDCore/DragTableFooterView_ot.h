@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UITableViewDragLoad/PrivateClass/DragTableFooterView_ot.h
+../../../../../UITableViewDragLoad/PrivateClass/DragTableFooterView_ot.h

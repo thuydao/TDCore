@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDBaseViewController/TDTableDataSourceDelegate.h
+../../../../../TDCore/TDTableDataSourceDelegate.h

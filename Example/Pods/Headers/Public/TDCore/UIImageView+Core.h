@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDCategory/UIImageView+Core.h
+../../../../../TDCategory/UIImageView+Core.h

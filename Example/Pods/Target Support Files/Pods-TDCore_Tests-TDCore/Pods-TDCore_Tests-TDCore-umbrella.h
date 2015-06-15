@@ -1,14 +1,13 @@
 #import <UIKit/UIKit.h>
 
 #import "TDBaseViewController.h"
+#import "TDCore.h"
 #import "TDTableDataSourceDelegate.h"
 #import "NSArray+TDCore.h"
 #import "NSDictionary+TDCore.h"
-#import "NSString+Core.h"
 #import "NSString+TDCore.h"
-#import "Prefix-Category-Core.h"
-#import "UIColor+Core.h"
 #import "UIColor+HexColor.h"
+#import "UIColor+TDCore.h"
 #import "UIImageView+Core.h"
 #import "UIScrollView+TDCore.h"
 #import "UIView+TDCore.h"

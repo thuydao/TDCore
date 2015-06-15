@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDEvent/UIAlertView+Block.h
+../../../../../TDEvent/UIAlertView+Block.h

@@ -5,7 +5,19 @@ PODS:
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
   - Specta (1.0.2)
-  - TDCore (1.0.0)
+  - TDCore (1.0.1):
+    - TDCore/TableViewDragLoad (= 1.0.1)
+    - TDCore/TDCategory (= 1.0.1)
+    - TDCore/TDEngineLog (= 1.0.1)
+    - TDCore/TDEvent (= 1.0.1)
+    - TDCore/TDPopup (= 1.0.1)
+    - TDCore/TDUtils (= 1.0.1)
+  - TDCore/TableViewDragLoad (1.0.1)
+  - TDCore/TDCategory (1.0.1)
+  - TDCore/TDEngineLog (1.0.1)
+  - TDCore/TDEvent (1.0.1)
+  - TDCore/TDPopup (1.0.1)
+  - TDCore/TDUtils (1.0.1)
 
 DEPENDENCIES:
   - Expecta
@@ -23,6 +35,6 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: dcf32672f1bbc23e86e7eeb7f30aa6884894e2ec
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
-  TDCore: 1a02818ba1ad00cb3b600d40e1892fab3a7aa50f
+  TDCore: d62834e13faa3e5fb454d63056c32fe07c9bcaef
 
 COCOAPODS: 0.36.4

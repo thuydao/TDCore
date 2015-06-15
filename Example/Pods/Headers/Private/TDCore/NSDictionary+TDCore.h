@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDCategory/NSDictionary+TDCore.h
+../../../../../TDCategory/NSDictionary+TDCore.h

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "TDCore"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
   s.description      = "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
   s.homepage         = "https://github.com/thuydao/TDCore"
@@ -17,17 +17,42 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Thuỷ Đào" => "daoduythuy@gmail.com" }
   s.source           = { :git => "https://github.com/thuydao/TDCore.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://www.facebook.com/daoduythuya'
 
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'TDCore/*'
+
+ s.subspec 'TDCategory' do |ss|
+    ss.source_files = 'TDCategory/*'
+  end
+
+ s.subspec 'TDEngineLog' do |ss|
+    ss.source_files = 'TDEngineLog/*'
+  end 
+
+ s.subspec 'TDEvent' do |ss|
+    ss.source_files = 'TDEvent/*'
+  end
+
+ s.subspec 'TDPopup' do |ss|
+    ss.source_files = 'TDPopup/*'
+  end
+
+ s.subspec 'TDUtils' do |ss|
+    ss.source_files = 'TDUtils/*'
+  end
+
+ s.subspec 'TableViewDragLoad' do |ss|
+    ss.source_files = 'UITableViewDragLoad/**/*'
+  end
+
   s.resource_bundles = {
-    'TDCore' => ['Pod/Assets/*.png']
+    'TDCore' => ['Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.public_header_files = 'TDCore/TDCore.h','TDBaseViewController/*.h','TDCategory/*.h','TDEngineLog/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDPopup/UIViewController+Popup.h
+../../../../../TDPopup/UIViewController+Popup.h

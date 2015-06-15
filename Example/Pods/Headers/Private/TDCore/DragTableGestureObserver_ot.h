@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UITableViewDragLoad/PrivateClass/DragTableGestureObserver_ot.h
+../../../../../UITableViewDragLoad/PrivateClass/DragTableGestureObserver_ot.h

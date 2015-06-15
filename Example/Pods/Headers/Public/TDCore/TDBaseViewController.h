@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDBaseViewController/TDBaseViewController.h
+../../../../../TDCore/TDBaseViewController.h

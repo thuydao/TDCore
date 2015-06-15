@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/TDCategory/UIView+TDCore.h
+../../../../../TDCategory/UIView+TDCore.h
