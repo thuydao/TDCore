@@ -13,11 +13,9 @@
 #pragma mark - TDCategory
 #import "NSArray+TDCore.h"
 #import "NSDictionary+TDCore.h"
-#import "NSString+Core.h"
 #import "NSString+TDCore.h"
 #import "UIColor+TDCore.h"
 #import "UIColor+HexColor.h"
-#import "UIImageView+Core.h"
 #import "UIScrollView+TDCore.h"
 #import "UIView+TDCore.h"
 
