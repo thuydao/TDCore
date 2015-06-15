@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: dcf32672f1bbc23e86e7eeb7f30aa6884894e2ec
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
-  TDCore: 902c07c44bf76e033159c7536ac4d20c1ccb62fb
+  TDCore: 1a02818ba1ad00cb3b600d40e1892fab3a7aa50f
 
 COCOAPODS: 0.36.4

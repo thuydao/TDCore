@@ -2,7 +2,7 @@
   "name": "TDCore",
   "version": "1.0.0",
   "summary": "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you",
-  "description": "                       An optional longer description of TDCore\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "description": "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code",
   "homepage": "https://github.com/thuydao/TDCore",
   "license": "MIT",
   "authors": {
