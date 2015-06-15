@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.name             = "TDCore"
   s.version          = "1.0.0"
   s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
-  s.description      = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you. Its develop by ThuyDao"
+  s.description      = "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
   s.homepage         = "https://github.com/thuydao/TDCore"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
