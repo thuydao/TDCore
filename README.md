@@ -1,0 +1,2 @@
+# TDCore
+Copyright @ Thuỷ Đào
