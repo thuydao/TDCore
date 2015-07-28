@@ -7,19 +7,21 @@
 //
 
 #import "UIResponder+TDPush.h"
-#define TD_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 @implementation UIResponder (TDPush)
 
 - (void)td_configureAPNS
 {
-    if (TD_IOS8)
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
     else
     {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+#pragma clang diagnostic pop
     }
 }
 
