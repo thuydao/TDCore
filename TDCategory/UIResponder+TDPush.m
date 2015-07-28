@@ -7,12 +7,13 @@
 //
 
 #import "UIResponder+TDPush.h"
+#define TD_IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 @implementation UIResponder (TDPush)
 
 - (void)td_configureAPNS
 {
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0 )
+    if (TD_IOS8)
     {
         [[UIApplication sharedApplication] registerForRemoteNotifications];
     }
