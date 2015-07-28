@@ -153,3 +153,13 @@
 - (UIView *)td_getViewFromXib:(NSString *)nameXib index:(NSInteger )index;
 
 @end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Category threads
+@interface TDBaseViewController (threads)
+
+- (void)td_main_thread:(void(^)())block;
+- (void)td_background_thread:(void(^)())block;
+
+@end

@@ -8,6 +8,7 @@
 #import "NSString+TDCore.h"
 #import "UIColor+HexColor.h"
 #import "UIColor+TDCore.h"
+#import "UIResponder+TDPush.h"
 #import "UIScrollView+TDCore.h"
 #import "UIView+TDCore.h"
 #import "NSObject+File.h"

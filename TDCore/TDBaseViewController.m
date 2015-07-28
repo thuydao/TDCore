@@ -354,7 +354,7 @@
 
 - (void)td_delay:(CGFloat)secs completed:(void (^) ())completed
 {
-    double delayInSeconds = 2.0;
+    double delayInSeconds = secs;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         //code to be executed on the main queue after delay
@@ -367,4 +367,25 @@
     return [[[NSBundle mainBundle] loadNibNamed:nameXib owner:self options:nil] objectAtIndex:index];
 }
 
-@end;
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Category threads
+@implementation TDBaseViewController (threads)
+
+- (void)td_main_thread:(void(^)())block
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        block();
+    });
+}
+
+- (void)td_background_thread:(void(^)())block
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        block();
+    });
+}
+
+@end
