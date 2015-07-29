@@ -129,6 +129,17 @@
     return [object floatValue];
 }
 
+- (double)td_doubleForKey:(NSString *)key
+{
+    id object = [self td_objectForKey:key];
+    
+    if ( !object )
+    {
+        return 0.0f;
+    }
+    
+    return [object doubleValue];
+}
 
 - (BOOL)td_boolForKey:(NSString *)key
 {

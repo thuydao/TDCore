@@ -24,6 +24,7 @@
 - (NSString *)td_stringForKey:(NSString *)key;
 - (NSInteger)td_intForKey:(NSString *)key;
 - (float)td_floatForKey:(NSString *)key;
+- (double)td_doubleForKey:(NSString *)key;
 - (BOOL)td_boolForKey:(NSString *)key;
 
 @end

@@ -157,6 +157,8 @@
 		984929CCDBB6A334DB405C17 /* UIView+TDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE9A585B67C6F21A25DBB9B /* UIView+TDEvent.m */; };
 		990BC0EE54F5EB426A91D358 /* EXPMatchers+conformTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C61E3F4C7385FF1BD1D500 /* EXPMatchers+conformTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		99799733C372D81AC14EA4CD /* EXPMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC61129FCEA8F94EA7B414B /* EXPMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9986477B1B68747400C61155 /* NSDate+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 998647791B68747400C61155 /* NSDate+TDCore.h */; };
+		9986477C1B68747400C61155 /* NSDate+TDCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9986477A1B68747400C61155 /* NSDate+TDCore.m */; };
 		9A823DD28F3DABEE4352EAC2 /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 155112F500DDBB1AB149FC8D /* NSObject+Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D0F5E06C08A017DF955E801 /* SPTSharedExampleGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 045847BFC1521025BDE23113 /* SPTSharedExampleGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D32219A5ACE19B16D5C5326 /* UIScrollView+DragTableSafeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C576AE787C4EC7F4629109 /* UIScrollView+DragTableSafeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -485,6 +487,8 @@
 		970B99522801961388BDADFC /* ExpectaObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaObject.h; path = Expecta/ExpectaObject.h; sourceTree = "<group>"; };
 		97471F49B7C2D033713F2AC4 /* TDAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAlert.h; sourceTree = "<group>"; };
 		98554D8942A93407E1480EB5 /* Pods-TDCore_Tests-FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDCore_Tests-FBSnapshotTestCase.xcconfig"; sourceTree = "<group>"; };
+		998647791B68747400C61155 /* NSDate+TDCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+TDCore.h"; path = "../../../../17-Eway Pos/eway-mpos-app/iOS/mPos/03-TDCore/NSDate+TDCore.h"; sourceTree = "<group>"; };
+		9986477A1B68747400C61155 /* NSDate+TDCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+TDCore.m"; path = "../../../../17-Eway Pos/eway-mpos-app/iOS/mPos/03-TDCore/NSDate+TDCore.m"; sourceTree = "<group>"; };
 		99E09B1C1D1580798A4D7AF3 /* UIColor+HexColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		9A8108F7FE278A969A78E98C /* Pods-TDCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDCore_Tests-dummy.m"; sourceTree = "<group>"; };
 		9AB0C588FE30953D8011F08D /* UIScrollView+TDCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TDCore.h"; sourceTree = "<group>"; };
@@ -1122,6 +1126,8 @@
 		D369EB31414249C7515336E0 /* TDCategory */ = {
 			isa = PBXGroup;
 			children = (
+				998647791B68747400C61155 /* NSDate+TDCore.h */,
+				9986477A1B68747400C61155 /* NSDate+TDCore.m */,
 				23BB01C89BD72166DBFABEF1 /* NSArray+TDCore.h */,
 				081CF1BE4A35E5842CBE3BA2 /* NSArray+TDCore.m */,
 				A6EEA122B5D60CCCAEF32B95 /* NSDictionary+TDCore.h */,
@@ -1366,6 +1372,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9986477B1B68747400C61155 /* NSDate+TDCore.h in Headers */,
 				4E79953DDE4D0CEED7D6DBBB /* Pods-TDCore_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1697,6 +1704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0C7AF758E16B8A667200837 /* Pods-TDCore_Example-dummy.m in Sources */,
+				9986477C1B68747400C61155 /* NSDate+TDCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
