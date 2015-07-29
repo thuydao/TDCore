@@ -10,9 +10,6 @@
 #import "TDEngineLog.h"
 
 @interface TDBaseViewController : UIViewController
-{    
-    NSMutableArray *arrCellIdentifiers, *arrHeights;
-}
 
 #pragma mark - Focus Field
 /**
