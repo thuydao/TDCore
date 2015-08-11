@@ -8,6 +8,7 @@
 
 #import "TDBaseObject.h"
 
+static TDBaseObject *sharedInstance = nil;
 @implementation TDBaseObject
 
 #pragma mark - private
@@ -21,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        [self initialize];
+        [self td_initialize];
     }
     return(self);
 }
@@ -31,9 +32,9 @@
  *  initialize
  *  Overwrite to customize init object
  */
-- (void)initialize
+- (void)td_initialize
 {
-    
+    NSLog(@"%s",__FUNCTION__);
 }
 
 #pragma mark - singleton
@@ -43,12 +44,11 @@
  *
  *  @return v
  */
-+ (instancetype)sharedInstance
++ (instancetype)td_sharedInstance
 {
-    static TDBaseObject *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[TDBaseObject alloc] init];
+        sharedInstance = [[[self class] alloc] init];
     });
     return sharedInstance;
 }

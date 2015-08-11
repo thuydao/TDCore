@@ -1,23 +1,27 @@
 PODS:
-  - Expecta (0.4.2)
-  - Expecta+Snapshots (1.3.3):
-    - Expecta (~> 0.3)
-    - FBSnapshotTestCase (= 1.6)
-  - FBSnapshotTestCase (1.6)
-  - Specta (1.0.2)
-  - TDCore (1.0.1):
-    - TDCore/TableViewDragLoad (= 1.0.1)
-    - TDCore/TDCategory (= 1.0.1)
-    - TDCore/TDEngineLog (= 1.0.1)
-    - TDCore/TDEvent (= 1.0.1)
-    - TDCore/TDPopup (= 1.0.1)
-    - TDCore/TDUtils (= 1.0.1)
-  - TDCore/TableViewDragLoad (1.0.1)
-  - TDCore/TDCategory (1.0.1)
-  - TDCore/TDEngineLog (1.0.1)
-  - TDCore/TDEvent (1.0.1)
-  - TDCore/TDPopup (1.0.1)
-  - TDCore/TDUtils (1.0.1)
+  - Expecta (1.0.2)
+  - Expecta+Snapshots (2.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0.3)
+  - FBSnapshotTestCase (2.0.3):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.3)
+  - FBSnapshotTestCase/Core (2.0.3)
+  - FBSnapshotTestCase/SwiftSupport (2.0.3):
+    - FBSnapshotTestCase/Core
+  - Specta (1.0.3)
+  - TDCore (1.1.0):
+    - TDCore/TableViewDragLoad (= 1.1.0)
+    - TDCore/TDCategory (= 1.1.0)
+    - TDCore/TDEngineLog (= 1.1.0)
+    - TDCore/TDEvent (= 1.1.0)
+    - TDCore/TDPopup (= 1.1.0)
+    - TDCore/TDUtils (= 1.1.0)
+  - TDCore/TableViewDragLoad (1.1.0)
+  - TDCore/TDCategory (1.1.0)
+  - TDCore/TDEngineLog (1.1.0)
+  - TDCore/TDEvent (1.1.0)
+  - TDCore/TDPopup (1.1.0)
+  - TDCore/TDUtils (1.1.0)
 
 DEPENDENCIES:
   - Expecta
@@ -31,10 +35,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
-  Expecta+Snapshots: dcf32672f1bbc23e86e7eeb7f30aa6884894e2ec
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
-  TDCore: d62834e13faa3e5fb454d63056c32fe07c9bcaef
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
+  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
+  FBSnapshotTestCase: d0eeca6bf87958e088b254396ae66873f971cfb1
+  Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
+  TDCore: c4f11425a822dff39b9de98ef657ae7be92c92c3
 
 COCOAPODS: 0.36.4

@@ -7,6 +7,8 @@
 //
 
 #import "TDViewController.h"
+#import "TestModel.h"
+#import "TestMultiDelegate.h"
 
 @interface TDViewController ()
 
@@ -17,7 +19,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    //test multi delegate
+    TestMultiDelegate *testobj = [[TestMultiDelegate alloc] td_initWithDelegates:nil];
+    
+    TestModel *model1 = [TestModel new];
+    model1.name = @"model1";
+    [testobj td_addDelegate:model1];
+    
+    TestModel *model2 = [TestModel new];
+    model2.name = @"model2";
+    [testobj td_addDelegate:model2];
+    
+    [testobj td_respondsToSelector:@selector(abc)];
+    
+    //test singleton
+    [TestModel td_sharedInstance].name = @"test singleton";
+    [[TestModel td_sharedInstance] print];
 }
 
 - (void)didReceiveMemoryWarning

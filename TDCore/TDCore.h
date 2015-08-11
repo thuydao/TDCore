@@ -33,6 +33,7 @@
 #pragma mark - TDUtils
 #import "TDAlert.h"
 #import "TDBaseObject.h"
+#import "TDMultiDelegate.h"
 
 #pragma mark - TableViewDragLoad
 #import "UITableView+DragLoad.h"

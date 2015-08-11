@@ -22,6 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9906FCF61B7A60A300CB05A0 /* TestMultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */; };
+		9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF81B7A614B00CB05A0 /* TestModel.m */; };
 		D0CE1B3969FA9C900C85D016 /* Pods_TDCore_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E676D1BE07F9C112312A3D7 /* Pods_TDCore_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		7A9672D27136B996C73C66EA /* TDCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TDCore.podspec; path = ../TDCore.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9090D9EF08BF98DEA957BAC1 /* Pods-TDCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDCore_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDCore_Tests/Pods-TDCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMultiDelegate.h; sourceTree = "<group>"; };
+		9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMultiDelegate.m; sourceTree = "<group>"; };
+		9906FCF71B7A614B00CB05A0 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		9906FCF81B7A614B00CB05A0 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		B674172BFC86E4F0BE35703D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F94F5576D039EDF6F22995C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +143,10 @@
 				6003F5A6195388D20070C39A /* TDViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */,
+				9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */,
+				9906FCF71B7A614B00CB05A0 /* TestModel.h */,
+				9906FCF81B7A614B00CB05A0 /* TestModel.m */,
 			);
 			name = "Example for TDCore";
 			path = TDCore;
@@ -390,6 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9906FCF61B7A60A300CB05A0 /* TestMultiDelegate.m in Sources */,
+				9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */,
 				6003F59E195388D20070C39A /* TDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* TDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -515,7 +527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDCore/TDCore-Prefix.pch";
 				INFOPLIST_FILE = "TDCore/TDCore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -531,7 +543,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDCore/TDCore-Prefix.pch";
 				INFOPLIST_FILE = "TDCore/TDCore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
