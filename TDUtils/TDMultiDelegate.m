@@ -9,7 +9,7 @@
 #import "TDMultiDelegate.h"
 
 @implementation TDMultiDelegate {
-    NSMutableArray* _td_delegates;
+    NSPointerArray* _td_delegates;
 }
 
 - (id)init {
@@ -22,21 +22,21 @@
         if (!self)
             return nil;
         
-        _td_delegates = [NSMutableArray new];
+        _td_delegates = [NSPointerArray weakObjectsPointerArray];
         for (id delegate in delegates)
-            [_td_delegates addObject:delegate];
+            [_td_delegates addPointer:(__bridge void*)delegate];
     }
     
     return self;
 }
 
 - (void)td_addDelegate:(id)delegate {
-    [_td_delegates addObject:delegate];
+    [_td_delegates addPointer:(__bridge void *)(delegate)];
 }
 
 - (NSUInteger)indexOfDelegate:(id)delegate {
     for (NSUInteger i = 0; i < _td_delegates.count; i += 1) {
-        if ([_td_delegates objectAtIndex:i] == delegate) {
+        if ([_td_delegates pointerAtIndex:i] == (__bridge void*)delegate) {
             return i;
         }
     }
@@ -47,7 +47,7 @@
     NSUInteger index = [self indexOfDelegate:otherDelegate];
     if (index == NSNotFound)
         index = _td_delegates.count;
-    [_td_delegates insertObject:delegate atIndex:index];
+    [_td_delegates insertPointer:(__bridge void*)delegate atIndex:index];
 }
 
 - (void)td_addDelegate:(id)delegate afterDelegate:(id)otherDelegate {
@@ -56,17 +56,19 @@
         index = 0;
     else
         index += 1;
-    [_td_delegates insertObject:delegate atIndex:index];
+    [_td_delegates insertPointer:(__bridge void *)(delegate) atIndex:index];
 }
 
 - (void)td_removeDelegate:(id)delegate {
     NSUInteger index = [self indexOfDelegate:delegate];
     if (index != NSNotFound)
-        [_td_delegates removeObjectAtIndex:index];
+        [_td_delegates removePointerAtIndex:index];
+    [_td_delegates compact];
 }
 
 - (void)td_removeAllDelegates {
-    [_td_delegates removeAllObjects];
+    for (NSUInteger i = _td_delegates.count; i > 0; i -= 1)
+        [_td_delegates removePointerAtIndex:i - 1];
 }
 
 - (BOOL)respondsToSelector:(SEL)selector {

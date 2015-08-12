@@ -41,6 +41,9 @@
 #pragma mark - APN
 #import "UIResponder+TDPush.h"
 
+#pragma mark - THEME
+#import "TDThemeManagement.h"
+
 #pragma mark - Threads
 #define TD_MAIN_THREAD(code)\
 dispatch_async(dispatch_get_main_queue(), ^{\

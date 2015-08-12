@@ -15,12 +15,14 @@ PODS:
     - TDCore/TDEngineLog (= 1.1.0)
     - TDCore/TDEvent (= 1.1.0)
     - TDCore/TDPopup (= 1.1.0)
+    - TDCore/TDTheme (= 1.1.0)
     - TDCore/TDUtils (= 1.1.0)
   - TDCore/TableViewDragLoad (1.1.0)
   - TDCore/TDCategory (1.1.0)
   - TDCore/TDEngineLog (1.1.0)
   - TDCore/TDEvent (1.1.0)
   - TDCore/TDPopup (1.1.0)
+  - TDCore/TDTheme (1.1.0)
   - TDCore/TDUtils (1.1.0)
 
 DEPENDENCIES:
@@ -39,6 +41,6 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
   FBSnapshotTestCase: d0eeca6bf87958e088b254396ae66873f971cfb1
   Specta: cf3e4188cf35375c3ee2cd03f8db8f1f4ef98234
-  TDCore: c4f11425a822dff39b9de98ef657ae7be92c92c3
+  TDCore: 5696f3cf01a63825224f0e44a136e688b268c7cf
 
 COCOAPODS: 0.36.4

@@ -48,6 +48,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'UITableViewDragLoad/**/*'
   end
 
+    s.subspec 'TDTheme' do |ss|
+        ss.source_files = 'TDTheme/*'
+    end
+
   s.resource_bundles = {
     'TDCore' => ['Assets/*.png']
   }

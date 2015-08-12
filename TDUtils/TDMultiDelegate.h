@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TDBaseObject.h"
 
-@interface TDMultiDelegate : NSObject
+@interface TDMultiDelegate : TDBaseObject
 
 /**
  The array of registered delegates.
  */
-@property (readonly, nonatomic) NSMutableArray* td_delegates;
+@property (readonly, nonatomic) NSPointerArray* td_delegates;
 
 - (id)td_initWithDelegates:(NSArray*)delegates;
 

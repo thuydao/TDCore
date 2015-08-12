@@ -46,6 +46,10 @@
     {
       "name": "TableViewDragLoad",
       "source_files": "UITableViewDragLoad/**/*"
+    },
+    {
+      "name": "TDTheme",
+      "source_files": "TDTheme/*"
     }
   ]
 }

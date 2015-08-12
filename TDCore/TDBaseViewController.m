@@ -64,10 +64,9 @@
 {
     [super viewWillDisappear:animated];
     
-    if ( isFirstWillDisappear )
+    if (isFirstWillDisappear)
     {
         isFirstWillDisappear = NO;
-        
         [self firstWillDisappear];
     }
 }
@@ -76,11 +75,9 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
     if ( isFirstDidDisappear )
     {
         isFirstDidDisappear = NO;
-        
         [self firstDidDisappear];
     }
 }
@@ -120,6 +117,7 @@
 - (void)firstWillAppear
 {
     TDLOG(@"");
+    [self td_useThemeManage];
 }
 
 /**
@@ -339,6 +337,7 @@
 {
     [[self navigationController] setNavigationBarHidden:YES animated:animated];
 }
+
 - (void)td_showNavigationBar:(BOOL)animated
 {
     [[self navigationController] setNavigationBarHidden:NO animated:animated];
@@ -387,5 +386,31 @@
         block();
     });
 }
+
+@end
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - TDTheme
+@implementation TDBaseViewController (TDTheme)
+
+- (void)td_useThemeManage
+{
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    if ([self respondsToSelector:@selector(td_configureTheme)])
+    {
+        [self performSelector:@selector(td_configureTheme)];
+    }
+    else
+    {
+        TDLOG(@"THIS CLASS(%@) DONT IMPLEMENT MULTI-THEME", NSStringFromClass([self class]));
+    }
+#pragma clang diagnostic pop
+    
+}
+
 
 @end

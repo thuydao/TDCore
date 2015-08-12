@@ -20,6 +20,7 @@
 #import "UIButton+TDEvent.h"
 #import "UIView+TDEvent.h"
 #import "UIViewController+Popup.h"
+#import "TDThemeManagement.h"
 #import "TDAlert.h"
 #import "TDBaseObject.h"
 #import "TDMultiDelegate.h"

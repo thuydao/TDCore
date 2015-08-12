@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface TDViewController : UIViewController
+@interface TDViewController : TDBaseViewController
 
 @end

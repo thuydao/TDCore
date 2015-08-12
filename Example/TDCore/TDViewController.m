@@ -27,6 +27,8 @@
     model1.name = @"model1";
     [testobj td_addDelegate:model1];
     
+    model1 = nil;
+    
     TestModel *model2 = [TestModel new];
     model2.name = @"model2";
     [testobj td_addDelegate:model2];
@@ -41,7 +43,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+//- (void)td_configureTheme
+//{
+//    TDLOG(@"");
+//}
 
 @end
