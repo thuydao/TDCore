@@ -8,55 +8,53 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = "TDCore"
-  s.version          = "1.1.0"
-  s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
-  s.description      = "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
-  s.homepage         = "https://github.com/thuydao/TDCore"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "Thuỷ Đào" => "daoduythuy@gmail.com" }
-  s.source           = { :git => "https://github.com/thuydao/TDCore.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://www.facebook.com/daoduythuya'
+s.name             = "TDCore"
+s.version          = "1.1.1"
+s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
+s.description      = "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
+s.homepage         = "https://github.com/thuydao/TDCore"
+# s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+s.license          = 'MIT'
+s.author           = { "Thuỷ Đào" => "daoduythuy@gmail.com" }
+s.source           = { :git => "https://github.com/thuydao/TDCore.git", :tag => s.version.to_s }
+# s.social_media_url = 'https://www.facebook.com/daoduythuya'
 
-  s.platform     = :ios, '6.0'
-  s.requires_arc = true
+s.platform     = :ios, '6.0'
+s.requires_arc = true
+s.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore', 'CoreFoundation']
 
-  s.source_files = 'TDCore/*'
+s.source_files = 'TDCore/*'
 
- s.subspec 'TDCategory' do |ss|
+s.subspec 'TDCategory' do |ss|
     ss.source_files = 'TDCategory/*'
-  end
+end
 
- s.subspec 'TDEngineLog' do |ss|
+s.subspec 'TDEngineLog' do |ss|
     ss.source_files = 'TDEngineLog/*'
-  end 
+end
 
- s.subspec 'TDEvent' do |ss|
+s.subspec 'TDEvent' do |ss|
     ss.source_files = 'TDEvent/*'
-  end
+end
 
- s.subspec 'TDPopup' do |ss|
+s.subspec 'TDPopup' do |ss|
     ss.source_files = 'TDPopup/*'
-  end
+end
 
- s.subspec 'TDUtils' do |ss|
+s.subspec 'TDUtils' do |ss|
     ss.source_files = 'TDUtils/*'
-  end
+end
 
- s.subspec 'TableViewDragLoad' do |ss|
+s.subspec 'TableViewDragLoad' do |ss|
     ss.source_files = 'UITableViewDragLoad/**/*'
-  end
+end
 
-    s.subspec 'TDTheme' do |ss|
-        ss.source_files = 'TDTheme/*'
-    end
 
-  s.resource_bundles = {
+s.resource_bundles = {
     'TDCore' => ['Assets/*.png']
-  }
+}
 
-  # s.public_header_files = 'TDCore/TDCore.h','TDBaseViewController/*.h','TDCategory/*.h','TDEngineLog/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+# s.public_header_files = 'TDCore/TDCore.h','TDBaseViewController/*.h','TDCategory/*.h','TDEngineLog/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'
+# s.frameworks = 'UIKit', 'MapKit'
+# s.dependency 'AFNetworking', '~> 2.3'
 end

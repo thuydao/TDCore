@@ -6,6 +6,7 @@
 //
 //
 
+#import <Foundation/Foundation.h>
 #import "TDMultiDelegate.h"
 
 @implementation TDMultiDelegate {

@@ -14,7 +14,6 @@
 
 @end
 
-
 @interface TDThemeManagement : TDMultiDelegate
 
 - (void)setCurrentThemeKey:(NSString *)currentThemeKey;

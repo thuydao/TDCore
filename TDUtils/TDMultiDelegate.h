@@ -6,7 +6,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+
 #import "TDBaseObject.h"
 
 @interface TDMultiDelegate : TDBaseObject
