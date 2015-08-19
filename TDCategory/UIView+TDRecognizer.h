@@ -10,12 +10,12 @@
 
 @interface UIView (TDRecognizer)
 
-- (void)td_addSiglePan:(SEL)selector;
-- (void)td_addDoublePan:(SEL)selector;
-- (void)td_addTriplePan:(SEL)selector;
-- (void)td_addHoldPress:(SEL)selector duration:(NSInteger)dur;
-- (void)td_doublePress:(SEL)selector;
-- (void)td_triplePress:(SEL)selector;
-- (void)td_numberPress:(NSInteger)num SEL:(SEL)selector;
+- (void)td_addSiglePan:(id)tagert selector:(SEL)selector;
+- (void)td_addDoublePan:(id)tagert selector:(SEL)selector;
+- (void)td_addTriplePan:(id)tagert selector:(SEL)selector;
+- (void)td_addHoldPress:(id)tagert selector:(SEL)selector duration:(NSInteger)dur;
+- (void)td_doublePress:(id)tagert selector:(SEL)selector;
+- (void)td_triplePress:(id)tagert selector:(SEL)selector;
+- (void)td_numberPress:(NSInteger)num tagert:(id)tagert selector:(SEL)selector;
 
 @end
