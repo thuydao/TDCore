@@ -18,6 +18,8 @@
 #import "UIColor+HexColor.h"
 #import "UIScrollView+TDCore.h"
 #import "UIView+TDCore.h"
+#import "UIView+TDRecognizer.h"
+#import "NSObject+TDDocument.h"
 
 #pragma mark - TDEngineLog
 #import "TDLog.h"
