@@ -20,6 +20,7 @@
 #import "UIView+TDCore.h"
 #import "UIView+TDRecognizer.h"
 #import "NSObject+TDDocument.h"
+#import "UIRefreshControl+UITableView.h"
 
 #pragma mark - TDEngineLog
 #import "TDLog.h"

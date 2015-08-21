@@ -176,6 +176,8 @@
 		9717322F6C284E14CCFA5486 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFE98B9C7B1C1593CFA65F4 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		982B5E005C773BB7D015FDBA /* EXPMatchers+beLessThanOrEqualTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B4B2A196D90DEB6F6385AD /* EXPMatchers+beLessThanOrEqualTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		98900BD12B1543F71BF96728 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799D19B671BAB068E2F892E /* UIAlertView+Block.m */; };
+		992436901B86D596007F989D /* UIRefreshControl+UITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9924368E1B86D596007F989D /* UIRefreshControl+UITableView.h */; };
+		992436911B86D596007F989D /* UIRefreshControl+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9924368F1B86D596007F989D /* UIRefreshControl+UITableView.m */; };
 		99251E35CA107F8EBE317885 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4271FF1265B2BA21C26F45FE /* EXPMatchers+beTruthy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A7BAFB157E2CD6E84FE5F7F /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C1509E66BBA879FD72F6BA /* SPTCallSite.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9B2CE179FC8620357F9DACD2 /* UIScrollView+DragTableSafeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44CA5483B312193A2655E33E /* UIScrollView+DragTableSafeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -545,6 +547,8 @@
 		96CBD5716A8A4BF799BD3C6B /* Pods-TDCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDCore_Example-dummy.m"; sourceTree = "<group>"; };
 		96F67D9C54422D3A267D3BAB /* Pods-TDCore_Tests-FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TDCore_Tests-FBSnapshotTestCase.xcconfig"; sourceTree = "<group>"; };
 		97740AFA36FCF1F65A25E828 /* DragTableHeaderView_ot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DragTableHeaderView_ot.h; sourceTree = "<group>"; };
+		9924368E1B86D596007F989D /* UIRefreshControl+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+UITableView.h"; sourceTree = "<group>"; };
+		9924368F1B86D596007F989D /* UIRefreshControl+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+UITableView.m"; sourceTree = "<group>"; };
 		9A0CA64CECA468B5B5ED01CC /* EXPMatchers+raise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+raise.h"; path = "Expecta/Matchers/EXPMatchers+raise.h"; sourceTree = "<group>"; };
 		9CB40EB1DE926AD746559FC4 /* Pods-TDCore_Tests-FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDCore_Tests-FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		9DA1184DC0764265742541A4 /* SPTTestSuite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPTTestSuite.h; path = Specta/Specta/SPTTestSuite.h; sourceTree = "<group>"; };
@@ -1003,6 +1007,8 @@
 		4E7ED8981FB6B9852C302404 /* TDCategory */ = {
 			isa = PBXGroup;
 			children = (
+				9924368E1B86D596007F989D /* UIRefreshControl+UITableView.h */,
+				9924368F1B86D596007F989D /* UIRefreshControl+UITableView.m */,
 				9ED256F9F0797B0D755012CC /* NSArray+TDCore.h */,
 				B90B5E708F8EA96266C95A47 /* NSArray+TDCore.m */,
 				BE5BCBACD11682D80BCBF833 /* NSDate+TDCore.h */,
@@ -1386,6 +1392,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992436901B86D596007F989D /* UIRefreshControl+UITableView.h in Headers */,
 				5E921C9BA415EA409B2BBBBC /* Pods-TDCore_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1777,6 +1784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3C81CF938A51ED32D0D80E /* Pods-TDCore_Example-dummy.m in Sources */,
+				992436911B86D596007F989D /* UIRefreshControl+UITableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
