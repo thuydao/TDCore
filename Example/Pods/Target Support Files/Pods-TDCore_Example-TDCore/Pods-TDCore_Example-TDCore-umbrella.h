@@ -10,6 +10,7 @@
 #import "NSString+TDCore.h"
 #import "UIColor+HexColor.h"
 #import "UIColor+TDCore.h"
+#import "UIRefreshControl+UITableView.h"
 #import "UIResponder+TDPush.h"
 #import "UIScrollView+TDCore.h"
 #import "UIView+TDCore.h"
