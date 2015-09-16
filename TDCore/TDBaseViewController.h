@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TDEngineLog.h"
+#import "TDThemeManagement.h"
 
 @interface TDBaseViewController : UIViewController
 

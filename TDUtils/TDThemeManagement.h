@@ -8,8 +8,11 @@
 
 #import "TDMultiDelegate.h"
 
+#define td_isTheme(themeName) [TDThemeManagement isTheme:themeName];
+
 @protocol TDThemeManagementProtocol <NSObject>
 
+@required
 - (void)td_configureTheme;
 
 @end
@@ -18,5 +21,7 @@
 
 - (void)setCurrentThemeKey:(NSString *)currentThemeKey;
 - (NSString *)currentThemeKey;
+
++ (BOOL)isTheme:(NSString *)themeName;
 
 @end

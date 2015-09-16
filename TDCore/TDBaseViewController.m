@@ -27,6 +27,8 @@
     
     [self performSelector:@selector(initView)];
     
+    [[TDThemeManagement td_sharedInstance] td_addDelegate:(id)self];
+    
     isFirstWillAppear = YES;
     isFirstDidAppear = YES;
     isFirstWillDisappear = YES;
@@ -406,7 +408,7 @@
     }
     else
     {
-        TDLOG(@"THIS CLASS(%@) DONT IMPLEMENT MULTI-THEME", NSStringFromClass([self class]));
+        TDLOG(@"THIS CLASS(%@) DONT IMPLEMENT MULTI-THEME ON METHOD: td_configureTheme", NSStringFromClass([self class]));
     }
 #pragma clang diagnostic pop
     

@@ -37,5 +37,9 @@
         return [ud stringForKey:@"td_currentThemekey"];
 }
 
++ (BOOL)isTheme:(NSString *)themeName
+{
+    return [[[[TDThemeManagement td_sharedInstance] currentThemeKey] uppercaseString] isEqualToString:[themeName uppercaseString]];
+}
 
 @end
