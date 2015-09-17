@@ -8,7 +8,7 @@
 
 #import "TDBaseObject.h"
 
-static TDBaseObject *sharedInstance = nil;
+static NSMutableDictionary *sharedInstance = nil;
 @implementation TDBaseObject
 
 #pragma mark - private
@@ -46,11 +46,30 @@ static TDBaseObject *sharedInstance = nil;
  */
 + (instancetype)td_sharedInstance
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[[self class] alloc] init];
-    });
-    return sharedInstance;
+    TDBaseObject *obj = nil;
+    @synchronized(self) {
+        
+        static dispatch_once_t onceToken;
+        
+        dispatch_once(&onceToken, ^{
+            
+            sharedInstance = [NSMutableDictionary new];
+        });
+        
+        NSString *className = NSStringFromClass([self class]);
+        
+        obj = [sharedInstance objectForKey:className];
+        
+        if ( !obj )
+        {
+            obj = [[[self class] alloc] init];
+            [sharedInstance setValue:obj forKey:className];
+        }
+        
+    }
+    
+    return obj;
+
 }
 
 @end
