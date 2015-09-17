@@ -32,7 +32,11 @@
 }
 
 - (void)td_addDelegate:(id)delegate {
-    [_td_delegates addPointer:(__bridge void *)(delegate)];
+    NSUInteger index = [self indexOfDelegate:delegate];
+    if (index != NSNotFound)
+    {
+         [_td_delegates addPointer:(__bridge void *)(delegate)];
+    }
 }
 
 - (NSUInteger)indexOfDelegate:(id)delegate {
@@ -94,6 +98,28 @@
             [delegate performSelector:selector];
     }
 #pragma clang diagnostic pop
+}
+
+
++ (void)td_addDelegate:(id)delegate
+{
+    [[TDMultiDelegate td_sharedInstance] td_addDelegate:delegate];
+}
+
+
++ (void)td_removeDelegate:(id)delegate
+{
+    [[TDMultiDelegate td_sharedInstance] td_removeDelegate:delegate];
+}
+
++ (void)td_removeAllDelegates
+{
+    [[TDMultiDelegate td_sharedInstance] td_removeAllDelegates];
+}
+
++ (void)td_respondsToSelector:(SEL)selector
+{
+    [[TDMultiDelegate td_sharedInstance] td_respondsToSelector:selector];
 }
 
 @end
