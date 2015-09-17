@@ -15,8 +15,10 @@
      NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if (![[self currentThemeKey] isEqualToString:@"currentThemeKey"])
     {
-        [self td_respondsToSelector:@selector(td_configureTheme)];
         [ud setObject:currentThemeKey forKey:@"td_currentThemekey"];
+        [ud synchronize];
+        
+        [self td_respondsToSelector:@selector(td_configureTheme)];
     }
     else
     {

@@ -8,7 +8,8 @@
 
 #import "TDMultiDelegate.h"
 
-#define td_isTheme(themeName) [TDThemeManagement isTheme:themeName];
+#define td_isTheme(themeName) [TDThemeManagement isTheme:themeName]
+#define td_setTheme(themeName) [[TDThemeManagement td_sharedInstance] setCurrentThemeKey:themeName];
 
 @protocol TDThemeManagementProtocol <NSObject>
 

@@ -38,6 +38,11 @@
     //test singleton
     [TestModel td_sharedInstance].name = @"test singleton";
     [[TestModel td_sharedInstance] print];
+    
+    if (td_isTheme(@"2"))
+    {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
