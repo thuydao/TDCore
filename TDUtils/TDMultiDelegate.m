@@ -32,11 +32,7 @@
 }
 
 - (void)td_addDelegate:(id)delegate {
-    NSUInteger index = [self indexOfDelegate:delegate];
-    if (index != NSNotFound)
-    {
-         [_td_delegates addPointer:(__bridge void *)(delegate)];
-    }
+    [_td_delegates addPointer:(__bridge void *)(delegate)];
 }
 
 - (NSUInteger)indexOfDelegate:(id)delegate {
