@@ -35,6 +35,7 @@
 
 #pragma mark - TDUtils
 #import "TDAlert.h"
+#import "TDPlist.h"
 
 #pragma mark - TableViewDragLoad
 #import "UITableView+DragLoad.h"
@@ -68,5 +69,13 @@ code;\
 #define TD_APP_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 #define TD_APP_NAME [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
 
+
+#pragma mark - WeakSafe
+#define TD_WEAK(var) __weak typeof(var) TD_WEAK_##var = var;
+#define TD_STRONG(var) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+__strong typeof(var) var = TD_WEAK_##var; \
+_Pragma("clang diagnostic pop")
 
 

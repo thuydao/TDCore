@@ -186,6 +186,8 @@
 		959F028D17F024A7E0227B08 /* UITableView+DragLoad.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F9D3A748E6E2BEF5665A8 /* UITableView+DragLoad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		984B9AB91EB8543A6BA1E9FF /* UIView+TDRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FEE3BA47F468886B72A8B7 /* UIView+TDRecognizer.m */; };
 		992B43253E883E4424463A1A /* Pods-TDCore_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5050CFD4A1363AD081EDDFD /* Pods-TDCore_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99B49E2B1BB8F6560099F750 /* NSObject+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 99B49E291BB8F6560099F750 /* NSObject+TDCore.h */; settings = {ASSET_TAGS = (); }; };
+		99B49E2C1BB8F6560099F750 /* NSObject+TDCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B49E2A1BB8F6560099F750 /* NSObject+TDCore.m */; settings = {ASSET_TAGS = (); }; };
 		9A3166FF22AEB794F8E529F1 /* UIColor+TDCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 763608E49794CFB2F63D09E8 /* UIColor+TDCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A4645EDFD0870715F71EF0C /* TDMultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC70E4F8CD3DE4F09C7D03 /* TDMultiDelegate.m */; };
 		9A6C0E29E275C9A1B6B4E58F /* NSObject+TDDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = A580375D866E0BB43746E131 /* NSObject+TDDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -546,6 +548,8 @@
 		97FC9336932CEC8FB6E52AEE /* EXPMatchers+beNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beNil.m"; path = "Expecta/Matchers/EXPMatchers+beNil.m"; sourceTree = "<group>"; };
 		9817310EFB81427A576172CC /* ExpectaSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ExpectaSupport.m; path = Expecta/ExpectaSupport.m; sourceTree = "<group>"; };
 		99AE47CC9DEEA3DFA31AAFA1 /* TDPlist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDPlist.m; sourceTree = "<group>"; };
+		99B49E291BB8F6560099F750 /* NSObject+TDCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TDCore.h"; sourceTree = "<group>"; };
+		99B49E2A1BB8F6560099F750 /* NSObject+TDCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TDCore.m"; sourceTree = "<group>"; };
 		9B274BD8B6D371214DD1FB84 /* Pods-TDCore_Tests-TDCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TDCore_Tests-TDCore-prefix.pch"; path = "../Pods-TDCore_Tests-TDCore/Pods-TDCore_Tests-TDCore-prefix.pch"; sourceTree = "<group>"; };
 		9E569FC7865DD554AD14F3B7 /* Pods-TDCore_Tests-Expecta+Snapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDCore_Tests-Expecta+Snapshots-dummy.m"; sourceTree = "<group>"; };
 		9FC2AC57FA98BDC883DC64F8 /* TDBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDBaseViewController.h; sourceTree = "<group>"; };
@@ -931,6 +935,8 @@
 				45252DE3E092D79CCCAAA8BC /* UIView+TDCore.m */,
 				C2E2DF3C892618759C870FF1 /* UIView+TDRecognizer.h */,
 				87FEE3BA47F468886B72A8B7 /* UIView+TDRecognizer.m */,
+				99B49E291BB8F6560099F750 /* NSObject+TDCore.h */,
+				99B49E2A1BB8F6560099F750 /* NSObject+TDCore.m */,
 			);
 			path = TDCategory;
 			sourceTree = "<group>";
@@ -1471,6 +1477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				992B43253E883E4424463A1A /* Pods-TDCore_Example-umbrella.h in Headers */,
+				99B49E2B1BB8F6560099F750 /* NSObject+TDCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1712,6 +1719,7 @@
 		0B2EFC768380BB7683426B0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 7D46CAECB6E5D3AD56D7087D /* Build configuration list for PBXProject "Pods" */;
@@ -1917,6 +1925,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B49E2C1BB8F6560099F750 /* NSObject+TDCore.m in Sources */,
 				630C311D0B46D0948BFAEE2A /* Pods-TDCore_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,12 @@
     NSPointerArray* _td_delegates;
 }
 
-- (id)init {
+- (id)init
+{
+    if (self = [super init])
+    {
+        
+    }
     return [self td_initWithDelegates:nil];
 }
 
