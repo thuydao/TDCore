@@ -9,6 +9,7 @@
 #import "TDViewController.h"
 #import "TestModel.h"
 #import "TestMultiDelegate.h"
+#import "TDViewController1.h"
 
 @interface TDViewController ()
 
@@ -20,6 +21,7 @@
 {
     [super viewDidLoad];
     
+    /*
     //test multi delegate
     TestMultiDelegate *testobj = [[TestMultiDelegate alloc] td_initWithDelegates:nil];
     
@@ -43,6 +45,8 @@
     {
         
     }
+     */
+    self.storyboard.familyNameFile = @"TestPlistStoryboard";
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,5 +58,11 @@
 //{
 //    TDLOG(@"");
 //}
+
+- (IBAction)changeView:(id)sender {
+    
+    [self td_pushViewControllerWithClass:[TDViewController1 class]];
+}
+
 
 @end

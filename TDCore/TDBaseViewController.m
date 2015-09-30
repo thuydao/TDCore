@@ -8,6 +8,7 @@
 
 #import "TDBaseViewController.h"
 
+
 @interface TDBaseViewController()
 {
     BOOL isFirstWillAppear, isFirstDidAppear; // Appear
@@ -195,7 +196,7 @@
 {
     @try
     {
-        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+        UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
         return vc;
     }
     @catch (NSException *exception)
@@ -226,7 +227,7 @@
 {
     @try
     {
-        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+        UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
         
         [self td_pushViewControllerWithObject:vc animated:animated];
     }

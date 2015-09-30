@@ -9,5 +9,6 @@
 @import UIKit;
 
 @interface TDViewController : TDBaseViewController
+- (IBAction)changeView:(id)sender;
 
 @end

@@ -24,6 +24,9 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9906FCF61B7A60A300CB05A0 /* TestMultiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */; };
 		9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9906FCF81B7A614B00CB05A0 /* TestModel.m */; };
+		9980C8371BBBCF560013F194 /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9980C8361BBBCF560013F194 /* Main1.storyboard */; settings = {ASSET_TAGS = (); }; };
+		9980C8391BBBCFA90013F194 /* TestPlistStoryboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */; settings = {ASSET_TAGS = (); }; };
+		9980C83C1BBBCFE80013F194 /* TDViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 9980C83B1BBBCFE80013F194 /* TDViewController1.m */; settings = {ASSET_TAGS = (); }; };
 		D0CE1B3969FA9C900C85D016 /* Pods_TDCore_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E676D1BE07F9C112312A3D7 /* Pods_TDCore_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,10 @@
 		9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMultiDelegate.m; sourceTree = "<group>"; };
 		9906FCF71B7A614B00CB05A0 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		9906FCF81B7A614B00CB05A0 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		9980C8361BBBCF560013F194 /* Main1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main1.storyboard; sourceTree = "<group>"; };
+		9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestPlistStoryboard.plist; sourceTree = "<group>"; };
+		9980C83A1BBBCFE80013F194 /* TDViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDViewController1.h; sourceTree = "<group>"; };
+		9980C83B1BBBCFE80013F194 /* TDViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDViewController1.m; sourceTree = "<group>"; };
 		B674172BFC86E4F0BE35703D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F94F5576D039EDF6F22995C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,17 +143,21 @@
 		6003F593195388D20070C39A /* Example for TDCore */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				9980C8361BBBCF560013F194 /* Main1.storyboard */,
+				6003F594195388D20070C39A /* Supporting Files */,
 				6003F59C195388D20070C39A /* TDAppDelegate.h */,
 				6003F59D195388D20070C39A /* TDAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* TDViewController.h */,
 				6003F5A6195388D20070C39A /* TDViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
-				9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */,
-				9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */,
 				9906FCF71B7A614B00CB05A0 /* TestModel.h */,
 				9906FCF81B7A614B00CB05A0 /* TestModel.m */,
+				9906FCF41B7A60A300CB05A0 /* TestMultiDelegate.h */,
+				9906FCF51B7A60A300CB05A0 /* TestMultiDelegate.m */,
+				9980C8381BBBCFA90013F194 /* TestPlistStoryboard.plist */,
+				9980C83A1BBBCFE80013F194 /* TDViewController1.h */,
+				9980C83B1BBBCFE80013F194 /* TDViewController1.m */,
 			);
 			name = "Example for TDCore";
 			path = TDCore;
@@ -286,7 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9980C8391BBBCFA90013F194 /* TestPlistStoryboard.plist in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				9980C8371BBBCF560013F194 /* Main1.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -404,6 +417,7 @@
 				9906FCF91B7A614B00CB05A0 /* TestModel.m in Sources */,
 				6003F59E195388D20070C39A /* TDAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* TDViewController.m in Sources */,
+				9980C83C1BBBCFE80013F194 /* TDViewController1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
