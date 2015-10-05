@@ -27,7 +27,6 @@
 #import "UIViewController+Popup.h"
 #import "TDAlert.h"
 #import "TDBaseObject.h"
-#import "TDKeyChain.h"
 #import "TDMultiDelegate.h"
 #import "TDPlist.h"
 #import "TDThemeManagement.h"
