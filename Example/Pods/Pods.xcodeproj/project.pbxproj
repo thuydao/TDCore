@@ -144,6 +144,8 @@
 		95C75B3009DA4C922E4C0B03C98652E5 /* EXPDoubleTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B9A215FB74874D1513F6355B16AC587 /* EXPDoubleTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96AD7C4DD9E9A8EA62F6A037C59CE5CF /* DragTableFooterView_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = 796E9F4DEEB01394BD1FFB069A85BDBC /* DragTableFooterView_ot.m */; };
 		9883A05A51BA60733B5F931F153F184D /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA33AA017BEE17C9930FF606FC7BA5E /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		99014BC51BC22276001079F7 /* TDKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 99014BC31BC22276001079F7 /* TDKeyChain.h */; settings = {ASSET_TAGS = (); }; };
+		99014BC61BC22276001079F7 /* TDKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 99014BC41BC22276001079F7 /* TDKeyChain.m */; settings = {ASSET_TAGS = (); }; };
 		9AED01A271125C2FB2A86DD62AB9379B /* TDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A5F10C81C7341B7799E7E549483B46 /* TDAlert.m */; };
 		9B16CC23B0DC7F36CDB6DE6F5557F5E5 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 694693F0D875105549A7D304608C6C2A /* FBSnapshotTestCase.m */; };
 		9B5B46A6C3A61216C861E7B9BA7934C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D554AED26B6E6D33FFB31699F57662 /* UIKit.framework */; };
@@ -469,6 +471,8 @@
 		9461781F3B7C4C4031B92917598F93C0 /* ExpectaSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ExpectaSupport.h; path = Expecta/ExpectaSupport.h; sourceTree = "<group>"; };
 		964B6FCE4850EE3B8A10A4945F2D5A41 /* Pods-TDCore_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TDCore_Example-frameworks.sh"; sourceTree = "<group>"; };
 		98D554AED26B6E6D33FFB31699F57662 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		99014BC31BC22276001079F7 /* TDKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDKeyChain.h; sourceTree = "<group>"; };
+		99014BC41BC22276001079F7 /* TDKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDKeyChain.m; sourceTree = "<group>"; };
 		9A7F20FDE51561B24F809BC698241B61 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		9B78A3EBA18CD7092CE4A156F4D1E88E /* EXPMatchers+conformTo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+conformTo.m"; path = "Expecta/Matchers/EXPMatchers+conformTo.m"; sourceTree = "<group>"; };
 		9CA07075D6B78268089978A4413FA2EF /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
@@ -1033,6 +1037,8 @@
 				1AF81C41DB77D5204ECEFE6BEABF3666 /* TDPlist.m */,
 				02CD4FDA1472B8878BB5035BD03FCDB8 /* TDThemeManagement.h */,
 				FB01ACE2B885CACDC4EDA4D7432A45F3 /* TDThemeManagement.m */,
+				99014BC31BC22276001079F7 /* TDKeyChain.h */,
+				99014BC41BC22276001079F7 /* TDKeyChain.m */,
 			);
 			path = TDUtils;
 			sourceTree = "<group>";
@@ -1346,6 +1352,7 @@
 				7ADEF2FEBC9FEE83B2366ACCDC466872 /* EXPMatchers+beTruthy.h in Headers */,
 				6AB7587056ED2F08F7D9AB941E452CD3 /* EXPMatchers+beginWith.h in Headers */,
 				C0405A00DC126BC6DDC92C13F6601D89 /* EXPMatchers+conformTo.h in Headers */,
+				99014BC51BC22276001079F7 /* TDKeyChain.h in Headers */,
 				0D2B095A9BA205CDB24E79C4400711E2 /* EXPMatchers+contain.h in Headers */,
 				1B2119CE59E06D0762EF292C6C9290B2 /* EXPMatchers+endWith.h in Headers */,
 				6FC684D5CC3406573A6A661FD7657B91 /* EXPMatchers+equal.h in Headers */,
@@ -1594,6 +1601,7 @@
 				9883A05A51BA60733B5F931F153F184D /* EXPMatchers+beSubclassOf.m in Sources */,
 				791EA0C3D0F148E28A408EB29FB0AAC8 /* EXPMatchers+beSupersetOf.m in Sources */,
 				ED65049FED301B6CF2B58D2B168BAF0E /* EXPMatchers+beTruthy.m in Sources */,
+				99014BC61BC22276001079F7 /* TDKeyChain.m in Sources */,
 				2794CEB5E23DB462B62B416D7542339F /* EXPMatchers+beginWith.m in Sources */,
 				BA5CFD5DF2231299FDCCDDCC5C6598BA /* EXPMatchers+conformTo.m in Sources */,
 				F377CBE64EA08E365CD0A248A45BF053 /* EXPMatchers+contain.m in Sources */,
