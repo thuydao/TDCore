@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "TDCore"
-s.version          = "1.1.15"
+s.version          = "1.1.16"
 s.summary          = "TDCore is a iOS framework. You have beauty project and stable. It will down time development for you"
 s.description      = "TDCore allows configure & create base to any iOS Project. Below are services needed to be implement basic funtion. so it's help to you can write short code and meanable. So you will the clear source code"
 s.homepage         = "https://github.com/thuydao/TDCore"
@@ -50,8 +50,12 @@ s.subspec 'TableViewDragLoad' do |ss|
 end
 
 
+s.subspec 'TDCustomView' do |ss|
+ss.source_files = 'TDCustomView/**/*'
+end
+
 s.resource_bundles = {
-    'TDCore' => ['Assets/*.png']
+    'TDCore' => ['Resources/**/*.{png,xib,storyboad}']
 }
 
 # s.public_header_files = 'TDCore/TDCore.h','TDBaseViewController/*.h','TDCategory/*.h','TDEngineLog/*.h','TDEvent/*.h','TDPopup/*.h','TDUtils/*.h','UITableViewDragLoad/**/*.h'

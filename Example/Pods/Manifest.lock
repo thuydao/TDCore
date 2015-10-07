@@ -9,19 +9,21 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.0.4):
     - FBSnapshotTestCase/Core
   - Specta (1.0.4)
-  - TDCore (1.1.15):
-    - TDCore/TableViewDragLoad (= 1.1.15)
-    - TDCore/TDCategory (= 1.1.15)
-    - TDCore/TDEngineLog (= 1.1.15)
-    - TDCore/TDEvent (= 1.1.15)
-    - TDCore/TDPopup (= 1.1.15)
-    - TDCore/TDUtils (= 1.1.15)
-  - TDCore/TableViewDragLoad (1.1.15)
-  - TDCore/TDCategory (1.1.15)
-  - TDCore/TDEngineLog (1.1.15)
-  - TDCore/TDEvent (1.1.15)
-  - TDCore/TDPopup (1.1.15)
-  - TDCore/TDUtils (1.1.15)
+  - TDCore (1.1.16):
+    - TDCore/TableViewDragLoad (= 1.1.16)
+    - TDCore/TDCategory (= 1.1.16)
+    - TDCore/TDCustomView (= 1.1.16)
+    - TDCore/TDEngineLog (= 1.1.16)
+    - TDCore/TDEvent (= 1.1.16)
+    - TDCore/TDPopup (= 1.1.16)
+    - TDCore/TDUtils (= 1.1.16)
+  - TDCore/TableViewDragLoad (1.1.16)
+  - TDCore/TDCategory (1.1.16)
+  - TDCore/TDCustomView (1.1.16)
+  - TDCore/TDEngineLog (1.1.16)
+  - TDCore/TDEvent (1.1.16)
+  - TDCore/TDPopup (1.1.16)
+  - TDCore/TDUtils (1.1.16)
 
 DEPENDENCIES:
   - Expecta
@@ -39,6 +41,6 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
   FBSnapshotTestCase: d94cf34841c9e77390e29009e8e2713479d48753
   Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
-  TDCore: 6a6b50071bea86c325b12882ad2f13b1de558bcf
+  TDCore: cc7962654f1976f5b7c001f84eb4e2cc49c8083c
 
 COCOAPODS: 0.38.2

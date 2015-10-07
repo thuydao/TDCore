@@ -12,7 +12,9 @@
 #import "TDViewController1.h"
 
 @interface TDViewController ()
-
+{
+    TDDatePicker *vi;
+}
 @end
 
 @implementation TDViewController
@@ -20,6 +22,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    vi = (TDDatePicker *)TD_CORE_VIEW_WITH_XIB_NAME(@"TDDatePicker");
+    [vi td_setDatePickerMode:UIDatePickerModeDateAndTime];
+    [vi td_configure:self.view];
     
     /*
     //test multi delegate
@@ -54,14 +60,30 @@
     [super didReceiveMemoryWarning];
 }
 
-//- (void)td_configureTheme
-//{
-//    TDLOG(@"");
-//}
-
 - (IBAction)changeView:(id)sender {
     
     [self td_pushViewControllerWithClass:[TDViewController1 class]];
+}
+
+- (IBAction)showPickerDate:(id)sender {
+    
+    
+    [vi td_showView];
+}
+
+- (void)td_datePickerChangeValue;
+{
+    TDLOG(@"");
+}
+
+- (void)td_datePickerDismis
+{
+    TDLOG(@"");
+}
+
+- (void)td_datePickerShow
+{
+    TDLOG(@"");
 }
 
 

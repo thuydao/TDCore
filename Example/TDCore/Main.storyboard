@@ -41,6 +41,14 @@
                                     <action selector="changeView:" destination="whP-gf-Uak" eventType="touchUpInside" id="p1f-ae-EtP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-um-C8I">
+                                <rect key="frame" x="151" y="112" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeView:" destination="whP-gf-Uak" eventType="touchUpInside" id="iGq-bH-dKN"/>
+                                    <action selector="showPickerDate:" destination="whP-gf-Uak" eventType="touchUpInside" id="oCk-3E-qxx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

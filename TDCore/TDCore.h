@@ -37,6 +37,10 @@
 #pragma mark - TDUtils
 #import "TDAlert.h"
 #import "TDPlist.h"
+#import "TDCoreResource.h"
+
+#pragma mark - TDCustomView
+#import "TDDatePicker.h"
 
 #pragma mark - TableViewDragLoad
 #import "UITableView+DragLoad.h"

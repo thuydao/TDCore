@@ -10,5 +10,6 @@
 
 @interface TDViewController : TDBaseViewController
 - (IBAction)changeView:(id)sender;
+- (IBAction)showPickerDate:(id)sender;
 
 @end
