@@ -12,9 +12,10 @@
 
 + (NSBundle *)td_getResourcesBundle
 {
-    NSString *path = [NSString stringWithFormat:@"%@/Frameworks/TDCore.framework/TDCore.bundle", [NSBundle mainBundle].bundlePath];
-    
-    NSBundle *bundle = [NSBundle bundleWithURL:[[NSURL alloc] initFileURLWithPath:path]];
+//    NSString *path = [NSString stringWithFormat:@"%@/Frameworks/TDCore.framework/TDCore.bundle", [NSBundle mainBundle].bundlePath];
+//
+//    NSBundle *bundle = [NSBundle bundleWithURL:[[NSURL alloc] initFileURLWithPath:path]];
+    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"TDCore" withExtension:@"bundle"]];
     return bundle;
 }
 
