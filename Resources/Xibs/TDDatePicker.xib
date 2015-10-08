@@ -39,7 +39,7 @@
                             </items>
                         </navigationBar>
                     </subviews>
-                    <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.99215686270000003" green="0.98039215690000003" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="ycu-Pw-4QS" firstAttribute="top" secondItem="mf9-Xu-n3X" secondAttribute="top" constant="1" id="696-Ja-frY"/>
                         <constraint firstItem="ycu-Pw-4QS" firstAttribute="leading" secondItem="mf9-Xu-n3X" secondAttribute="leading" id="cDx-BP-LOH"/>
@@ -60,7 +60,7 @@
                     </date>
                 </datePicker>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="KIg-aV-Ldg" firstAttribute="top" secondItem="mf9-Xu-n3X" secondAttribute="bottom" id="9Sp-Mb-Rg9"/>
                 <constraint firstItem="mf9-Xu-n3X" firstAttribute="top" secondItem="RkB-KC-UYA" secondAttribute="top" id="RPI-Rd-8He"/>
