@@ -70,7 +70,7 @@
 
 - (CGRect)hiddenRect
 {
-    return CGRectMake(0, self.superview.frame.size.height, self.frame.size.width, self.frame.size.height);
+    return CGRectMake(0, self.superview.frame.size.height, self.superview.frame.size.width, self.frame.size.height);
 }
 
 - (IBAction)btnCancelPress:(UIButton *)sender
