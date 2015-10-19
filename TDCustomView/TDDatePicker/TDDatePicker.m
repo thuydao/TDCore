@@ -12,19 +12,19 @@
 
 - (void)initTransView
 {
-    if(!self.transView)
+    if(!self.td_transView)
     {
-        self.transView = [[UIView alloc] init];
-        self.transView.userInteractionEnabled = YES;
-        [self.transView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:(id)self action:@selector(clicktoAllSpace)]];
+        self.td_transView = [[UIView alloc] init];
+        self.td_transView.userInteractionEnabled = YES;
+        [self.td_transView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:(id)self action:@selector(clicktoAllSpace)]];
     }
 
 }
 
 - (void)td_setDatePickerMode:(UIDatePickerMode)mode
 {
-    self.dpkDate.datePickerMode = mode;
-    [self.dpkDate addTarget:(id)self action:@selector(changeOneSelf) forControlEvents:UIControlEventValueChanged];
+    self.td_dpkDate.datePickerMode = mode;
+    [self.td_dpkDate addTarget:(id)self action:@selector(changeOneSelf) forControlEvents:UIControlEventValueChanged];
     [self initTransView];
 }
 
@@ -32,7 +32,7 @@
 {
     [self initTransView];
     self.TDDatePickerDelegate = (id)self;
-    [superview addSubview:self.transView];
+    [superview addSubview:self.td_transView];
     [superview addSubview:self];
     self.frame = [self hiddenRect];
     
@@ -40,31 +40,35 @@
 
 - (void)td_showView
 {
-    self.transView.frame = CGRectMake(0.0f, 0.0f, self.superview.frame.size.width, self.superview.frame.size.height);
+    self.td_transView.frame = CGRectMake(0.0f, 0.0f, self.superview.frame.size.width, self.superview.frame.size.height);
     
     [self showOneSelf];
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
-    self.isShowing = YES;
+    self.td_isShowing = YES;
+    self.hidden = NO;
+    self.td_transView.hidden = NO;
     self.frame = CGRectMake(0, self.superview.frame.size.height - self.frame.size.height, self.frame.size.width, self.frame.size.height);
-    self.transView.alpha = 1.0;
+    self.td_transView.alpha = 1.0;
     [UIView commitAnimations];
 }
 
 - (void)td_hideView
 {
-    self.isShowing = NO;
+    self.td_isShowing = NO;
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.3];
     CGRect rect = self.frame;
-    rect.origin.y = self.superview.frame.size.height;
+    rect.origin.y = self.superview.frame.size.height*2;
     self.frame = rect;
-    self.transView.alpha = 0.0;
+    self.hidden = YES;
+    self.td_transView.hidden = YES;
+    self.td_transView.alpha = 0.0;
     [UIView commitAnimations];
     
-    self.transView.frame = CGRectMake(0.0f, self.superview.frame.size.height, self.superview.frame.size.width, self.superview.frame.size.height);
+    self.td_transView.frame = CGRectMake(0.0f, self.superview.frame.size.height*2, self.superview.frame.size.width, self.superview.frame.size.height);
     
 }
 
@@ -110,12 +114,18 @@
     if (self.TDDatePickerDelegate && [self.TDDatePickerDelegate respondsToSelector:@selector(td_datePickerDone)]) {
         [self.TDDatePickerDelegate td_datePickerDone];
     }
+    if (self.TDDatePickerDelegate && [self.TDDatePickerDelegate respondsToSelector:@selector(td_datePickerDone:)]) {
+        [self.TDDatePickerDelegate td_datePickerDone:self.td_dpkDate.date];
+    }
 }
 
 - (void)changeOneSelf
 {
     if (self.TDDatePickerDelegate && [self.TDDatePickerDelegate respondsToSelector:@selector(td_datePickerChangeValue)]) {
         [self.TDDatePickerDelegate td_datePickerChangeValue];
+    }
+    if (self.TDDatePickerDelegate && [self.TDDatePickerDelegate respondsToSelector:@selector(td_datePickerChangeValue:)]) {
+        [self.TDDatePickerDelegate td_datePickerChangeValue:self.td_dpkDate.date];
     }
 }
 

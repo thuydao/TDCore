@@ -75,12 +75,12 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="btnCancel" destination="g37-w3-B1I" id="TAE-dQ-KkA"/>
-                <outlet property="btnDone" destination="KtC-V8-pJb" id="dFx-26-ePx"/>
                 <outlet property="dpkDate" destination="KIg-aV-Ldg" id="zgD-uL-v5T"/>
                 <outlet property="td_NavigationBar" destination="ycu-Pw-4QS" id="YDz-yF-u25"/>
+                <outlet property="td_btnCancel" destination="g37-w3-B1I" id="NPU-GY-yoZ"/>
+                <outlet property="td_btnDone" destination="KtC-V8-pJb" id="FFg-0V-z3w"/>
             </connections>
-            <point key="canvasLocation" x="214" y="242"/>
+            <point key="canvasLocation" x="348" y="249"/>
         </view>
     </objects>
 </document>

@@ -12,20 +12,22 @@
 @protocol TDDatePickerDelegate <NSObject>
 
 - (void)td_datePickerChangeValue;
+- (void)td_datePickerChangeValue:(NSDate *)value;
 - (void)td_datePickerCancel;
 - (void)td_datePickerDone;
+- (void)td_datePickerDone:(NSDate *)value;
 - (void)td_datePickerShow;
 
 @end
 
 @interface TDDatePicker : UIView
 
-@property (nonatomic, strong) UIView *transView;
-@property (nonatomic, assign) BOOL isShowing;
+@property (nonatomic, strong) UIView *td_transView;
+@property (nonatomic, assign) BOOL td_isShowing;
 @property (nonatomic, weak) IBOutlet UINavigationBar *td_NavigationBar;
-@property (nonatomic, weak) IBOutlet UIDatePicker *dpkDate;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *btnCancel;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *btnDone;
+@property (nonatomic, weak) IBOutlet UIDatePicker *td_dpkDate;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *td_btnCancel;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *td_btnDone;
 
 @property (weak, nonatomic) id<TDDatePickerDelegate> TDDatePickerDelegate;
 
