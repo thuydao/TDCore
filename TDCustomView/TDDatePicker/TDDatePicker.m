@@ -10,6 +10,19 @@
 
 @implementation TDDatePicker
 
++ (TDDatePicker *)initDatePickerWithDelegate:(id)target andView:(UIView *)view
+{
+    NSBundle *bundle = [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"TDCore" withExtension:@"bundle"]];
+    
+    TDDatePicker *tdDatePicker = (TDDatePicker *)[[bundle loadNibNamed:NSStringFromClass([TDDatePicker class]) owner:self options:nil] firstObject];
+    
+    [tdDatePicker td_setDatePickerMode:UIDatePickerModeDateAndTime];
+    [tdDatePicker td_configure:view];
+    tdDatePicker.td_dpkDate.date = [NSDate date];
+    tdDatePicker.TDDatePickerDelegate = (id)self;
+    return tdDatePicker;
+}
+
 - (void)initTransView
 {
     if(!self.td_transView)
@@ -35,6 +48,8 @@
     [superview addSubview:self.td_transView];
     [superview addSubview:self];
     self.frame = [self hiddenRect];
+    self.td_transView.hidden = YES;
+    self.hidden = YES;
     
 }
 
@@ -74,7 +89,7 @@
 
 - (CGRect)hiddenRect
 {
-    return CGRectMake(0, self.superview.frame.size.height, self.superview.frame.size.width, self.frame.size.height);
+    return CGRectMake(0, self.superview.frame.size.height*2, self.superview.frame.size.width, self.frame.size.height);
 }
 
 - (IBAction)btnCancelPress:(UIButton *)sender

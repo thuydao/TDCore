@@ -39,6 +39,10 @@
 - (void)td_setDatePickerMode:(UIDatePickerMode)mode;
 
 #pragma mark - public method
+
+//default today & UIDatePickerModeDateAndTime
++ (TDDatePicker *)initDatePickerWithDelegate:(id)target andView:(UIView *)view;
+
 - (void)td_showView;
 - (void)td_hideView;
 - (void)td_configure:(UIView *)superview;
