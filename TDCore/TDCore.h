@@ -83,4 +83,12 @@ _Pragma("clang diagnostic ignored \"-Wshadow\"") \
 __strong typeof(var) var = TD_WEAK_##var; \
 _Pragma("clang diagnostic pop")
 
+#pragma mark - check device orientation
+// check device orientation
+#define dDeviceOrientation [[UIDevice currentDevice] orientation]
+#define td_isPortrait  UIDeviceOrientationIsPortrait(dDeviceOrientation)
+#define td_isLandscape UIDeviceOrientationIsLandscape(dDeviceOrientation)
+#define td_isFaceUp    dDeviceOrientation == UIDeviceOrientationFaceUp   ? YES : NO
+#define td_isFaceDown  dDeviceOrientation == UIDeviceOrientationFaceDown ? YES : NO
 
+#define TD_STRING_FROM_FILE(filename, type) [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filename ofType:type] encoding:NSUTF8StringEncoding error:nil]
