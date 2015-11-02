@@ -11,6 +11,7 @@
 #import "NSString+TDCore.h"
 #import "UIColor+HexColor.h"
 #import "UIColor+TDCore.h"
+#import "UILabel+TDCore.h"
 #import "UINavigationController+Rotation.h"
 #import "UIRefreshControl+UITableView.h"
 #import "UIResponder+TDPush.h"
