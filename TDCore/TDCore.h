@@ -22,9 +22,10 @@
 #import "NSObject+TDDocument.h"
 #import "UIRefreshControl+UITableView.h"
 #import "UIStoryboard+TDCore.h"
+#import "UILabel+TDCore.h"
 
 #pragma mark - TDEngineLog
-#import "TDLog.h"
+#import <TDLog/TDLog.h>
 
 #pragma mark - TDEvent
 #import "UIAlertView+Block.h"
@@ -38,6 +39,7 @@
 #import "TDAlert.h"
 #import "TDPlist.h"
 #import "TDCoreResource.h"
+#import "TDAutoCoding.h"
 
 #pragma mark - TDCustomView
 #import "TDDatePicker.h"

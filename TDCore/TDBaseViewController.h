@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TDEngineLog.h"
 #import "TDThemeManagement.h"
 #import "UIStoryboard+TDCore.h"
+#import <TDLog/TDLog.h>
 
 @interface TDBaseViewController : UIViewController
 

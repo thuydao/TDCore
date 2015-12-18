@@ -37,6 +37,12 @@
 }
 
 - (void)td_addDelegate:(id)delegate {
+    
+    if(!_td_delegates)
+    {
+        _td_delegates = [NSPointerArray weakObjectsPointerArray];
+    }
+    
     [_td_delegates addPointer:(__bridge void *)(delegate)];
 }
 
