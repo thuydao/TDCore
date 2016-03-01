@@ -94,3 +94,7 @@ _Pragma("clang diagnostic pop")
 #define td_isFaceDown  dDeviceOrientation == UIDeviceOrientationFaceDown ? YES : NO
 
 #define TD_STRING_FROM_FILE(filename, type) [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filename ofType:type] encoding:NSUTF8StringEncoding error:nil]
+
+//For Test
+#define TD_TICK NSDate *td_startDate = [NSDate date]
+#define TD_TOCK NSLog(@"Elapsed Time: %f",[td_startDate timeIntervalSinceNow])

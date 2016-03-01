@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13EDF4B412AB07D16EE996FE /* Pods_TDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F20821888DC697380A3445 /* Pods_TDCore_Example.framework */; };
+		20379B9A1C8541F0006ADE4F /* TDLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20379B991C8541F0006ADE4F /* TDLog.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		00B7F683EB8FC72C60726AFE /* Pods-TDCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDCore_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDCore_Example/Pods-TDCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		20379B991C8541F0006ADE4F /* TDLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TDLog.framework; path = ../Frameworks/TDLog.framework; sourceTree = "<group>"; };
 		3E676D1BE07F9C112312A3D7 /* Pods_TDCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F20821888DC697380A3445 /* Pods_TDCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8FA430C20C9BD71F2F15A0 /* Pods-TDCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDCore_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDCore_Tests/Pods-TDCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20379B9A1C8541F0006ADE4F /* TDLog.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -130,6 +133,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20379B991C8541F0006ADE4F /* TDLog.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -541,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDCore/TDCore-Prefix.pch";
@@ -559,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDCore/TDCore-Prefix.pch";

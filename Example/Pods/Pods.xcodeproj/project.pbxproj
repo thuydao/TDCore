@@ -101,7 +101,6 @@
 		5A3DED2AC8EC782575EBFF45ED0E3901 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2A7045E6C026BA010287BD8533A92B /* UIKit.framework */; };
 		5A9C858ECD138BAA2AFB76AA08D6132D /* NSObject+TDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87A31F123A123CE38BECA5CAB74FFB /* NSObject+TDDocument.m */; };
 		5B2D4A621D3DA971A474776AF36BB073 /* EXPBlockDefinedMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C09805DD701F05B0FA3348EDA3BDC7CB /* EXPBlockDefinedMatcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5D6EEF79F955E704A83506042C38D31C /* TDTableDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BDAF9624004746C19175BD7FA65B095 /* TDTableDataSourceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E8E45327868431F4A6AD90972318738 /* UIViewController+Popup.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CF8B6B610E53AF2BACB08E10BB0F3D /* UIViewController+Popup.m */; };
 		5EA7043FE10E75D02F3C3052AF8B8318 /* EXPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 91EC2AD8B04A0D0F0EC345F2B7070A95 /* EXPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61DC7B8FDAC76B1EAB04E576ECCED032 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C868D690588A6B89F532448ECAE12885 /* FBSnapshotTestController.m */; };
@@ -116,6 +115,7 @@
 		69CBFF5B7699798C1340A06FBA5988D5 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A4C7651D93EA7961A58155BBDF43CF /* FBSnapshotTestCasePlatform.m */; };
 		6A25E6B3962F484552C0B69768AE4E50 /* SPTCompiledExample.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A35BE0267849F84514C1480B43A470C /* SPTCompiledExample.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B18CB8AE93968751A5516FF036EC895 /* UILabel+TDCore.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B4CF3852E9955B5F856D17ABF008C7 /* UILabel+TDCore.m */; };
+		6CC7D7C2A29E237B501651543C646604 /* TDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E961F7325CAC0B38089DE17E9BB363C7 /* TDBaseViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6D83DC35E7D9B6D8B4B56AC5AD68D951 /* UIScrollView+DragTableSafeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A78CB1BD4F0EC6A882D2A23660A4B2D /* UIScrollView+DragTableSafeAnimation.m */; };
 		6E1D978790705E137FDE439AA68DD3AA /* EXPFloatTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = CD486E43B7465271EE4EBCB98E5DAF8D /* EXPFloatTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EFC63A5CED45BB39FC79D87F2C47D6B /* EXPMatchers+beGreaterThan.h in Headers */ = {isa = PBXBuildFile; fileRef = A54AE821E3D5E7DF7DA3ED83AF9B4AF2 /* EXPMatchers+beGreaterThan.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,6 +167,7 @@
 		A93D92D6DCD5B39C483CA0D2866E2FA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB28AEA7C51A16F17EA3E3899E33881B /* Foundation.framework */; };
 		AA351A78EDE4FBC7CA3ADE33A4172A86 /* SPTExampleGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B05516F560C08699BF135F729DD5E4 /* SPTExampleGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD35F9EF86B28B4FFF594E9BB98EAC14 /* SPTSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = BF701C1C8F03B74819BFFD19C9DEA426 /* SPTSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD4099CC2357B206F02D8D13177DEAA4 /* TDTableDataSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BDAF9624004746C19175BD7FA65B095 /* TDTableDataSourceDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AF1F46668D4591602887998C6E9C10AD /* EXPMatchers+beCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C6B238F553535C865A990AB217F102 /* EXPMatchers+beCloseTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFFC8900E52BBEC72059334132F3A8F3 /* ExpectaSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B52C3887A118767CC0A773555B7C029 /* ExpectaSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B04AC583A2D3144AD6B5050CFAD6C103 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C5264C8856449AAE042E752645CDA1 /* FBSnapshotTestCase.framework */; };
@@ -212,7 +213,6 @@
 		E0AAF49134A0505DF00E20E7B62087E1 /* EXPMatchers+beIdenticalTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 959C603B0B7FDCFBCEC10840D84C91CE /* EXPMatchers+beIdenticalTo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1EC4532663CA75DE5BD00CB0A56814D /* Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = D148E142A756A0CD8BA055B657862814 /* Expecta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2BD9EBC882FC79D9BBAC7801EBF4234 /* TDThemeManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7A122BBFCEC0BDBB86DF249760D4B /* TDThemeManagement.m */; };
-		E54216BA71DA76F79C4CF8B362DB075F /* TDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E961F7325CAC0B38089DE17E9BB363C7 /* TDBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5B255B6D402068C668571805265F185 /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A34529BD4845497E03C2B6A8A2B0694 /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5B2E90F03D779F53BCF6BC16B7D7160 /* DragTableFooterView_ot.h in Headers */ = {isa = PBXBuildFile; fileRef = F543F49258C33CC2E2D8CE0CBB155C33 /* DragTableFooterView_ot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E735386085CE344F6A01178CF4763852 /* EXPMatchers+beNil.h in Headers */ = {isa = PBXBuildFile; fileRef = 28980D1268BF5D8196D266D4FC2F50E4 /* EXPMatchers+beNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1378,14 +1378,14 @@
 				D19DC6C62C8FBFADCED0232E90E1D8B1 /* TDAlert.h in Headers */,
 				137A48F03C74A1B18AEDE15DEDB4C97C /* TDAutoCoding.h in Headers */,
 				7AF6F0685910AA7E422B788C5435C2F1 /* TDBaseObject.h in Headers */,
-				E54216BA71DA76F79C4CF8B362DB075F /* TDBaseViewController.h in Headers */,
+				6CC7D7C2A29E237B501651543C646604 /* TDBaseViewController.h in Headers */,
 				C8BB9497F456EBB7977AFB93E2B80CE9 /* TDCore-umbrella.h in Headers */,
 				B9AA787D42053290D5863898DB5C27F2 /* TDCore.h in Headers */,
 				ED6B372B84EC30597B9AFD6012E75FCB /* TDCoreResource.h in Headers */,
 				751797E696AF08DC012071EE1DD1018B /* TDDatePicker.h in Headers */,
 				658A8331DD292C0517692B0669779A1E /* TDMultiDelegate.h in Headers */,
 				1BCD891D788BCF6A68FA47D726A92178 /* TDPlist.h in Headers */,
-				5D6EEF79F955E704A83506042C38D31C /* TDTableDataSourceDelegate.h in Headers */,
+				AD4099CC2357B206F02D8D13177DEAA4 /* TDTableDataSourceDelegate.h in Headers */,
 				BDC1C9477BDD38365C7DDE9585B61DE1 /* TDThemeManagement.h in Headers */,
 				B93555E5940271E66EFCEABA8FE0D40C /* UIAlertView+Block.h in Headers */,
 				DDD96D5C35CC3306FC8D399E3A90E983 /* UIButton+TDEvent.h in Headers */,
@@ -2010,7 +2010,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TDCore/TDCore-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TDCore/Info.plist";
@@ -2134,7 +2133,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TDCore/TDCore-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TDCore/Info.plist";
