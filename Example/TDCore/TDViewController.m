@@ -73,17 +73,17 @@
 
 - (void)td_datePickerChangeValue;
 {
-    TDLOG(@"");
+     NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 - (void)td_datePickerDismis
 {
-    TDLOG(@"");
+     NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 - (void)td_datePickerShow
 {
-    TDLOG(@"");
+     NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 

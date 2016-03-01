@@ -24,9 +24,6 @@
 #import "UIStoryboard+TDCore.h"
 #import "UILabel+TDCore.h"
 
-#pragma mark - TDEngineLog
-#import <TDLog/TDLog.h>
-
 #pragma mark - TDEvent
 #import "UIAlertView+Block.h"
 #import "UIButton+TDEvent.h"

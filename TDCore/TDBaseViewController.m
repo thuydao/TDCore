@@ -8,11 +8,10 @@
 
 #import "TDBaseViewController.h"
 
-
 @interface TDBaseViewController()
 {
-    BOOL isFirstWillAppear, isFirstDidAppear; // Appear
-    BOOL isFirstWillDisappear, isFirstDidDisappear; // Disappear
+  BOOL isFirstWillAppear, isFirstDidAppear; // Appear
+  BOOL isFirstWillDisappear, isFirstDidDisappear; // Disappear
 }
 
 @end
@@ -24,75 +23,75 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    [self performSelector:@selector(initView)];
-    
-    [[TDThemeManagement td_sharedInstance] td_addDelegate:(id)self];
-    
-    isFirstWillAppear = YES;
-    isFirstDidAppear = YES;
-    isFirstWillDisappear = YES;
-    isFirstDidDisappear = YES;
+  [super viewDidLoad];
+  
+  [self performSelector:@selector(initView)];
+  
+  [[TDThemeManagement td_sharedInstance] td_addDelegate:(id)self];
+  
+  isFirstWillAppear = YES;
+  isFirstDidAppear = YES;
+  isFirstWillDisappear = YES;
+  isFirstDidDisappear = YES;
 }
 
 // Called when the view is about to made visible. Default does nothing
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+  [super viewWillAppear:animated];
+  
+  if ( isFirstWillAppear )
+  {
+    isFirstWillAppear = NO;
     
-    if ( isFirstWillAppear )
-    {
-        isFirstWillAppear = NO;
-        
-        [self firstWillAppear];
-    }
+    [self firstWillAppear];
+  }
 }
 
 // Called when the view has been fully transitioned onto the screen. Default does nothing
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+  [super viewDidAppear:animated];
+  
+  if ( isFirstDidAppear )
+  {
+    isFirstDidAppear = NO;
     
-    if ( isFirstDidAppear )
-    {
-        isFirstDidAppear = NO;
-        
-        [self firstDidAppear];
-    }
+    [self firstDidAppear];
+  }
 }
 
 // Called when the view is dismissed, covered or otherwise hidden. Default does nothing
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-    
-    if (isFirstWillDisappear)
-    {
-        isFirstWillDisappear = NO;
-        [self firstWillDisappear];
-    }
+  [super viewWillDisappear:animated];
+  
+  if (isFirstWillDisappear)
+  {
+    isFirstWillDisappear = NO;
+    [self firstWillDisappear];
+  }
 }
 
 // Called after the view was dismissed, covered or otherwise hidden. Default does nothing
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
-    if ( isFirstDidDisappear )
-    {
-        isFirstDidDisappear = NO;
-        [self firstDidDisappear];
-    }
+  [super viewDidDisappear:animated];
+  if ( isFirstDidDisappear )
+  {
+    isFirstDidDisappear = NO;
+    [self firstDidDisappear];
+  }
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 - (void)dealloc
 {
-    TDLOG(@"%@ dealloc", NSStringFromClass([self class]));
+  NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 #pragma mark - initView
@@ -101,7 +100,7 @@
  */
 - (void)initView
 {
-    
+  
 }
 
 #pragma mark - Focus Field
@@ -110,7 +109,7 @@
  */
 - (void)focusField
 {
-    
+  
 }
 
 #pragma mark - Appear More
@@ -119,8 +118,8 @@
  */
 - (void)firstWillAppear
 {
-    TDLOG(@"");
-    [self td_useThemeManage];
+  NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
+  [self td_useThemeManage];
 }
 
 /**
@@ -128,9 +127,9 @@
  */
 - (void)firstDidAppear
 {
-    TDLOG(@"");
-    
-    [self focusField];
+  NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
+  
+  [self focusField];
 }
 
 /**
@@ -138,7 +137,7 @@
  */
 - (void)firstWillDisappear
 {
-    TDLOG(@"");
+  NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 /**
@@ -146,20 +145,20 @@
  */
 - (void)firstDidDisappear
 {
-    TDLOG(@"");
+  NSLog(@"%s [Line %d] %@",__FUNCTION__, __LINE__, NSStringFromClass([self class]));
 }
 
 #pragma mark - Orientation
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    if ( toInterfaceOrientation == UIDeviceOrientationPortrait )
-    {
-        [self layoutForPortrait];
-    }
-    else if ( toInterfaceOrientation == UIDeviceOrientationLandscapeLeft || toInterfaceOrientation == UIDeviceOrientationLandscapeRight )
-    {
-        [self layoutForLandscape];
-    }
+  if ( toInterfaceOrientation == UIDeviceOrientationPortrait )
+  {
+    [self layoutForPortrait];
+  }
+  else if ( toInterfaceOrientation == UIDeviceOrientationLandscapeLeft || toInterfaceOrientation == UIDeviceOrientationLandscapeRight )
+  {
+    [self layoutForLandscape];
+  }
 }
 
 /**
@@ -167,7 +166,7 @@
  */
 - (void)layoutForPortrait
 {
-    // Begin code here
+  // Begin code here
 }
 
 /**
@@ -175,7 +174,7 @@
  */
 - (void)layoutForLandscape
 {
-    // Begin code here
+  // Begin code here
 }
 
 @end
@@ -194,16 +193,16 @@
  */
 - (id)td_getViewControllerWithClass:(Class)aClass
 {
-    @try
-    {
-        UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
-        return vc;
-    }
-    @catch (NSException *exception)
-    {
-        return [[UIViewController alloc] init];
-        TDLOG(@"cant found viewcontroller from storyboard file")
-    }
+  @try
+  {
+    UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+    return vc;
+  }
+  @catch (NSException *exception)
+  {
+    return [[UIViewController alloc] init];
+    NSLog(@"cant found viewcontroller from storyboard file");
+  }
 }
 
 /**
@@ -214,7 +213,7 @@
  */
 - (void)td_pushViewControllerWithClass:(Class )aClass
 {
-    [self td_pushViewControllerWithClass:aClass animated:YES];
+  [self td_pushViewControllerWithClass:aClass animated:YES];
 }
 
 /**
@@ -225,16 +224,16 @@
  */
 - (void)td_pushViewControllerWithClass:(Class )aClass animated:(BOOL )animated
 {
-    @try
-    {
-        UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
-        
-        [self td_pushViewControllerWithObject:vc animated:animated];
-    }
-    @catch (NSException *exception)
-    {
-        TDLOG(@"cant found viewcontroller from storyboard file")
-    }
+  @try
+  {
+    UIViewController *vc = [self.storyboard td_instantiateViewControllerWithIdentifier:NSStringFromClass(aClass)];
+    
+    [self td_pushViewControllerWithObject:vc animated:animated];
+  }
+  @catch (NSException *exception)
+  {
+    NSLog(@"cant found viewcontroller from storyboard file");
+  }
 }
 
 
@@ -246,14 +245,14 @@
  */
 - (void)td_pushViewControllerWithObject:(id )aObject
 {
-    @try
-    {
-        [self.navigationController pushViewController:aObject animated:YES];
-    }
-    @catch (NSException *exception)
-    {
-        TDLOG(@"object = nil")
-    }
+  @try
+  {
+    [self.navigationController pushViewController:aObject animated:YES];
+  }
+  @catch (NSException *exception)
+  {
+    NSLog(@"object = nil");
+  }
 }
 
 /**
@@ -264,14 +263,14 @@
  */
 - (void)td_pushViewControllerWithObject:(id )aObject animated:(BOOL )animated
 {
-    @try
-    {
-        [self.navigationController pushViewController:aObject animated:animated];
-    }
-    @catch (NSException *exception)
-    {
-        TDLOG(@"object = nil")
-    }
+  @try
+  {
+    [self.navigationController pushViewController:aObject animated:animated];
+  }
+  @catch (NSException *exception)
+  {
+    NSLog(@"object = nil");
+  }
 }
 
 /**
@@ -281,14 +280,14 @@
  */
 - (void)td_popViewControllerWithObject:(id)aObject
 {
-    @try
-    {
-        [self.navigationController popToViewController:aObject animated:YES];
-    }
-    @catch (NSException *exception)
-    {
-        TDLOG(@"object = nil")
-    }
+  @try
+  {
+    [self.navigationController popToViewController:aObject animated:YES];
+  }
+  @catch (NSException *exception)
+  {
+    NSLog(@"object = nil");
+  }
 }
 
 /**
@@ -296,7 +295,7 @@
  */
 - (void)td_popViewController
 {
-    [self td_popViewControllerWithAnimation:YES];
+  [self td_popViewControllerWithAnimation:YES];
 }
 
 /**
@@ -306,7 +305,7 @@
  */
 - (void)td_popViewControllerWithAnimation:(BOOL )animated
 {
-    [self.navigationController popViewControllerAnimated:animated];
+  [self.navigationController popViewControllerAnimated:animated];
 }
 
 /**
@@ -314,7 +313,7 @@
  */
 - (void)td_popToRootViewController
 {
-    [self td_popToRootViewControllerWithAnimation:YES];
+  [self td_popToRootViewControllerWithAnimation:YES];
 }
 
 /**
@@ -324,7 +323,7 @@
  */
 - (void)td_popToRootViewControllerWithAnimation:(BOOL )animated
 {
-    [self.navigationController popToRootViewControllerAnimated:animated];
+  [self.navigationController popToRootViewControllerAnimated:animated];
 }
 
 /**
@@ -332,18 +331,18 @@
  */
 - (void)td_hideBackbutton
 {
-    self.navigationItem.leftBarButtonItem = nil;
-    self.navigationItem.hidesBackButton = YES;
+  self.navigationItem.leftBarButtonItem = nil;
+  self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)td_hideNavigationBar:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:YES animated:animated];
+  [[self navigationController] setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)td_showNavigationBar:(BOOL)animated
 {
-    [[self navigationController] setNavigationBarHidden:NO animated:animated];
+  [[self navigationController] setNavigationBarHidden:NO animated:animated];
 }
 
 @end
@@ -356,17 +355,17 @@
 
 - (void)td_delay:(CGFloat)secs completed:(void (^) ())completed
 {
-    double delayInSeconds = secs;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        //code to be executed on the main queue after delay
-        completed();
-    });
+  double delayInSeconds = secs;
+  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    //code to be executed on the main queue after delay
+    completed();
+  });
 }
 
 - (UIView *)td_getViewFromXib:(NSString *)nameXib index:(NSInteger )index
 {
-    return [[[NSBundle mainBundle] loadNibNamed:nameXib owner:self options:nil] objectAtIndex:index];
+  return [[[NSBundle mainBundle] loadNibNamed:nameXib owner:self options:nil] objectAtIndex:index];
 }
 
 @end
@@ -378,16 +377,16 @@
 
 - (void)td_main_thread:(void(^)())block
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        block();
-    });
+  dispatch_async(dispatch_get_main_queue(), ^{
+    block();
+  });
 }
 
 - (void)td_background_thread:(void(^)())block
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        block();
-    });
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    block();
+  });
 }
 
 @end
@@ -399,20 +398,20 @@
 
 - (void)td_useThemeManage
 {
-    
+  
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-    if ([self respondsToSelector:@selector(td_configureTheme)])
-    {
-        [self performSelector:@selector(td_configureTheme)];
-    }
-    else
-    {
-        TDLOG(@"THIS CLASS(%@) DONT IMPLEMENT MULTI-THEME ON METHOD: td_configureTheme", NSStringFromClass([self class]));
-    }
+  if ([self respondsToSelector:@selector(td_configureTheme)])
+  {
+    [self performSelector:@selector(td_configureTheme)];
+  }
+  else
+  {
+    NSLog(@"THIS CLASS(%@) DONT IMPLEMENT MULTI-THEME ON METHOD: td_configureTheme", NSStringFromClass([self class]));
+  }
 #pragma clang diagnostic pop
-    
+  
 }
 
 

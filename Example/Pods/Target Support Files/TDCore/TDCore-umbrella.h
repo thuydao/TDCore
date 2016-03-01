@@ -1,6 +1,8 @@
 #import <UIKit/UIKit.h>
 
 #import "TDCore.h"
+#import "TDBaseViewController.h"
+#import "TDTableDataSourceDelegate.h"
 #import "NSArray+TDCore.h"
 #import "NSDate+TDCore.h"
 #import "NSDictionary+TDCore.h"

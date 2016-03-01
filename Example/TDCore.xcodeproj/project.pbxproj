@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13EDF4B412AB07D16EE996FE /* Pods_TDCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F20821888DC697380A3445 /* Pods_TDCore_Example.framework */; };
-		20379B9A1C8541F0006ADE4F /* TDLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20379B991C8541F0006ADE4F /* TDLog.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -87,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20379B9A1C8541F0006ADE4F /* TDLog.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
