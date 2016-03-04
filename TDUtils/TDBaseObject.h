@@ -35,4 +35,8 @@
  */
 + (instancetype)td_sharedInstance;
 
+#pragma mark - Public Method
+
+- (NSDictionary *)td_dictionary;
+
 @end
