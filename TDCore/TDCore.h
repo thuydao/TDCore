@@ -25,7 +25,7 @@
 #import "UILabel+TDCore.h"
 
 #pragma mark - TDEvent
-#import "UIAlertView+Block.h"
+//#import "UIAlertView+Block.h"
 #import "UIButton+TDEvent.h"
 #import "UIView+TDEvent.h"
 
@@ -45,7 +45,7 @@
 #import "UITableView+DragLoad.h"
 
 #pragma mark - APN
-#import "UIResponder+TDPush.h"
+//#import "UIResponder+TDPush.h"
 
 #pragma mark - THEME
 #import "TDThemeManagement.h"
