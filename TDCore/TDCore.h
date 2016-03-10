@@ -25,7 +25,7 @@
 #import "UILabel+TDCore.h"
 
 #pragma mark - TDEvent
-//#import "UIAlertView+Block.h"
+#import "UIAlertView+Block.h"
 #import "UIButton+TDEvent.h"
 #import "UIView+TDEvent.h"
 

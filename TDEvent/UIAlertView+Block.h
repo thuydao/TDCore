@@ -46,6 +46,8 @@ typedef void (^UIAlertViewCompletionBlock) (UIAlertView *alertView, NSInteger bu
 // Have not Style - other button
 + (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle tapBlock:(UIAlertViewCompletionBlock)tapBlock;
 
+- (instancetype)td_show:(UIAlertViewCompletionBlock)tapBlock;
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #pragma mark - Origin Ryan Maxwell
 + (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock;

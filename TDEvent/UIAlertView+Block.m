@@ -68,6 +68,15 @@ static const void *UIAlertViewShouldEnableFirstOtherButtonBlockKey  = &UIAlertVi
     return [self td_showAlertViewWithTitle:title message:message style:UIAlertViewStyleDefault cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil tapBlock:tapBlock];
 }
 
+- (instancetype)td_show:(UIAlertViewCompletionBlock)tapBlock
+{
+  self.tapBlock = tapBlock;
+  self.delegate = (id)self;
+  [self show];
+  
+  return self;
+}
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #pragma mark - Origin Ryan Maxwell
 + (instancetype)td_showAlertViewWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertViewStyle)style cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles tapBlock:(UIAlertViewCompletionBlock)tapBlock {
