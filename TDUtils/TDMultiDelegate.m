@@ -107,6 +107,13 @@
 #pragma clang diagnostic pop
 }
 
+- (void)td_respnse:(void(^)(id delegate))block {
+  
+  for (id delegate in _td_delegates) {
+    block(delegate);
+  }
+}
+
 
 + (void)td_addDelegate:(id)delegate
 {
