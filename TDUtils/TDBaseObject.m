@@ -67,7 +67,6 @@ static NSMutableDictionary *sharedInstance = nil;
       obj = [[[self class] alloc] init];
       [sharedInstance setValue:obj forKey:className];
     }
-    
   }
   
   return obj;

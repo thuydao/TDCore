@@ -107,7 +107,7 @@
 #pragma clang diagnostic pop
 }
 
-- (void)td_respnse:(void(^)(id delegate))block {
+- (void)td_response:(void(^)(id delegate))block {
   
   for (id delegate in _td_delegates) {
     block(delegate);
@@ -117,23 +117,23 @@
 
 + (void)td_addDelegate:(id)delegate
 {
-    [[TDMultiDelegate td_sharedInstance] td_addDelegate:delegate];
+    [[self td_sharedInstance] td_addDelegate:delegate];
 }
 
 
 + (void)td_removeDelegate:(id)delegate
 {
-    [[TDMultiDelegate td_sharedInstance] td_removeDelegate:delegate];
+    [[self td_sharedInstance] td_removeDelegate:delegate];
 }
 
 + (void)td_removeAllDelegates
 {
-    [[TDMultiDelegate td_sharedInstance] td_removeAllDelegates];
+    [[self td_sharedInstance] td_removeAllDelegates];
 }
 
 + (void)td_respondsToSelector:(SEL)selector
 {
-    [[TDMultiDelegate td_sharedInstance] td_respondsToSelector:selector];
+    [[self td_sharedInstance] td_respondsToSelector:selector];
 }
 
 @end

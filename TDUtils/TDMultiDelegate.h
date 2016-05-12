@@ -25,7 +25,7 @@
 - (void)td_removeDelegate:(id)delegate;
 - (void)td_removeAllDelegates;
 - (void)td_respondsToSelector:(SEL)selector;
-- (void)td_respnse:(void(^)(id delegate))block;
+- (void)td_response:(void(^)(id delegate))block;
 
 
 + (void)td_addDelegate:(id)delegate;
