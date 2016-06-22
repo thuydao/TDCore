@@ -1,30 +1,55 @@
 //
-//  TDAutoCoding.h
+//  AutoCoding.m
 //
-//  Version 2.2.1
+//  Version 2.2.2
 //
-// THUY DAO Clone from https://github.com/nicklockwood/AutoCoding
+//  Created by Nick Lockwood on 19/11/2011.
+//  Copyright (c) 2011 Charcoal Design
+//
+//  Distributed under the permissive zlib License
+//  Get the latest version from here:
+//
+//  https://github.com/nicklockwood/AutoCoding
+//
+//  This software is provided 'as-is', without any express or implied
+//  warranty.  In no event will the authors be held liable for any damages
+//  arising from the use of this software.
+//
+//  Permission is granted to anyone to use this software for any purpose,
+//  including commercial applications, and to alter it and redistribute it
+//  freely, following restrictions:
+//
+//  1. The origin of this software must not be misrepresented; you must not
+//  claim that you wrote the original software. If you use this software
+//  in a product, an acknowledgment in the product documentation would be
+//  appreciated but is not required.
+//
+//  2. Altered source versions must be plainly marked as such, and must not be
+//  misrepresented as being the original software.
+//
+//  3. This notice may not be removed or altered from any source distribution.
 //
 
-
-#import "TDAutoCoding.h"
+#import "AutoCoding.h"
 #import <objc/runtime.h>
 
 
-#pragma GCC diagnostic ignored "-Wgnu"
+#pragma clang diagnostic ignored "-Wgnu"
+#pragma clang diagnostic ignored "-Wpartial-availability"
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 
 
 static NSString *const AutocodingException = @"AutocodingException";
 
 
-@implementation NSObject (TDAutoCoding)
+@implementation NSObject (AutoCoding)
 
 + (BOOL)supportsSecureCoding
 {
     return YES;
 }
 
-+ (instancetype)td_objectWithContentsOfFile:(NSString *)filePath
++ (instancetype)objectWithContentsOfFile:(NSString *)filePath
 {
     //load the file
     NSData *data = [NSData dataWithContentsOfFile:filePath];
@@ -40,7 +65,7 @@ static NSString *const AutocodingException = @"AutocodingException";
 		if (object)
 		{
 			//check if object is an NSCoded unarchive
-			if ([object respondsToSelector:@selector(objectForKey:)] && [(NSDictionary *)object objectForKey:@"$archiver"])
+			if ([object respondsToSelector:@selector(objectForKeyedSubscript:)] && ((NSDictionary *)object)[@"$archiver"])
 			{
 				object = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 			}
@@ -56,7 +81,7 @@ static NSString *const AutocodingException = @"AutocodingException";
 	return object;
 }
 
-- (BOOL)td_writeToFile:(NSString *)filePath atomically:(BOOL)useAuxiliaryFile
+- (BOOL)writeToFile:(NSString *)filePath atomically:(BOOL)useAuxiliaryFile
 {
     //note: NSData, NSDictionary and NSArray already implement this method
     //and do not save using NSCoding, however the objectWithContentsOfFile
@@ -67,20 +92,10 @@ static NSString *const AutocodingException = @"AutocodingException";
     return [data writeToFile:filePath atomically:useAuxiliaryFile];
 }
 
-+ (NSDictionary *)codableProperties
++ (NSDictionary<NSString *, Class> *)codableProperties
 {
     //deprecated
-    SEL deprecatedSelector = NSSelectorFromString(@"codableKeys");
-    if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
-    {
-        NSLog(@"AutoCoding Warning: codableKeys method is no longer supported. Use codableProperties instead.");
-    }
-    deprecatedSelector = NSSelectorFromString(@"uncodableKeys");
-    if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
-    {
-        NSLog(@"AutoCoding Warning: uncodableKeys method is no longer supported. Use ivars, or synthesize your properties using non-KVC-compliant names to avoid coding them instead.");
-    }
-    deprecatedSelector = NSSelectorFromString(@"uncodableProperties");
+    SEL deprecatedSelector = NSSelectorFromString(@"uncodableProperties");
     NSArray *uncodableProperties = nil;
     if ([self respondsToSelector:deprecatedSelector] || [self instancesRespondToSelector:deprecatedSelector])
     {
@@ -183,7 +198,7 @@ static NSString *const AutocodingException = @"AutocodingException";
     return codableProperties;
 }
 
-- (NSDictionary *)codableProperties
+- (NSDictionary<NSString *, Class> *)codableProperties
 {
     __autoreleasing NSDictionary *codableProperties = objc_getAssociatedObject([self class], _cmd);
     if (!codableProperties)
@@ -203,10 +218,10 @@ static NSString *const AutocodingException = @"AutocodingException";
     return codableProperties;
 }
 
-- (NSDictionary *)dictionaryRepresentation
+- (NSDictionary<NSString *, id> *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    for (__unsafe_unretained NSString *key in [self codableProperties])
+    for (__unsafe_unretained NSString *key in self.codableProperties)
     {
         id value = [self valueForKey:key];
         if (value) dict[key] = value;
@@ -218,7 +233,7 @@ static NSString *const AutocodingException = @"AutocodingException";
 {
     BOOL secureAvailable = [aDecoder respondsToSelector:@selector(decodeObjectOfClass:forKey:)];
     BOOL secureSupported = [[self class] supportsSecureCoding];
-    NSDictionary *properties = [self codableProperties];
+    NSDictionary *properties = self.codableProperties;
     for (NSString *key in properties)
     {
         id object = nil;
@@ -233,7 +248,7 @@ static NSString *const AutocodingException = @"AutocodingException";
         }
         if (object)
         {
-            if (secureSupported && ![object isKindOfClass:propertyClass])
+            if (secureSupported && ![object isKindOfClass:propertyClass] && object != [NSNull null])
             {
                 [NSException raise:AutocodingException format:@"Expected '%@' to be a %@, but was actually a %@", key, propertyClass, [object class]];
             }
@@ -242,19 +257,15 @@ static NSString *const AutocodingException = @"AutocodingException";
     }
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wno-objc-designated-initializers"
-#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     [self setWithCoder:aDecoder];
     return self;
 }
-#pragma clang diagnostic pop
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    for (NSString *key in [self codableProperties])
+    for (NSString *key in self.codableProperties)
     {
         id object = [self valueForKey:key];
         if (object) [aCoder encodeObject:object forKey:key];

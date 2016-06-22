@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-TDCore_Example/AutoCoding.framework"
   install_framework "Pods-TDCore_Example/TDCore.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-TDCore_Example/AutoCoding.framework"
   install_framework "Pods-TDCore_Example/TDCore.framework"
 fi

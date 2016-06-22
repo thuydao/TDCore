@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6245D1D89A017B3F0CAB0DCF'
+               BlueprintIdentifier = 'E92462E26F2713B1238631A7'
                BlueprintName = 'TDCore'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TDCore.framework'>

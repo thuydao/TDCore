@@ -42,8 +42,11 @@
     {
         _td_delegates = [NSPointerArray weakObjectsPointerArray];
     }
-    
-    [_td_delegates addPointer:(__bridge void *)(delegate)];
+    NSUInteger index = [self indexOfDelegate:delegate];
+    if (index == NSNotFound) {
+
+        [_td_delegates addPointer:(__bridge void *)(delegate)];
+    }
 }
 
 - (NSUInteger)indexOfDelegate:(id)delegate {
@@ -108,10 +111,10 @@
 }
 
 - (void)td_response:(void(^)(id delegate))block {
-  
-  for (id delegate in _td_delegates) {
-    block(delegate);
-  }
+    NSArray *arr = [_td_delegates copy];
+    for (id delegate in arr) {
+        block(delegate);
+    }
 }
 
 

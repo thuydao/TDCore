@@ -36,7 +36,8 @@
 #import "TDAlert.h"
 #import "TDPlist.h"
 #import "TDCoreResource.h"
-#import "TDAutoCoding.h"
+#import <AutoCoding/AutoCoding.h>
+#import "NSObject+TDAutoCoding.h"
 
 #pragma mark - TDCustomView
 #import "TDDatePicker.h"
