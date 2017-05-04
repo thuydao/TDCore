@@ -22,6 +22,7 @@
 - (NSArray *)td_arrayForKey:(NSString *)key;
 - (NSMutableArray *)td_mutableArrayForKey:(NSString *)key;
 - (NSString *)td_stringForKey:(NSString *)key;
+- (NSDate *)td_dateForKey:(NSString *)key format:(NSString *)dateFormat;
 - (NSInteger)td_intForKey:(NSString *)key;
 - (float)td_floatForKey:(NSString *)key;
 - (BOOL)td_boolForKey:(NSString *)key;

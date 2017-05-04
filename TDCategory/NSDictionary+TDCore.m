@@ -103,6 +103,13 @@
     return @"";
 }
 
+- (NSDate *)td_dateForKey:(NSString *)key format:(NSString *)dateFormat
+{
+    NSString *stringDate = [self td_stringForKey:key];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = dateFormat;
+    return [formatter dateFromString:stringDate];
+}
 
 - (NSInteger)td_intForKey:(NSString *)key
 {
